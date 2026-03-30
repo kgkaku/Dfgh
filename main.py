@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Toffee Live Channel Scraper - Fully Dynamic with Cookie Capture
+Toffee Live Channel Scraper - Fully Dynamic with Live Cookie Capture
 """
 
 import asyncio
@@ -13,66 +13,62 @@ from playwright.async_api import async_playwright
 class ToffeeScraper:
     def __init__(self):
         self.channels = []
-        self.page = None
-        self.context = None
+        self.cookie_string = ""
+        self.user_agent = ""
 
     async def scrape(self):
         """Main scraping function"""
         async with async_playwright() as p:
-            # Launch browser (headless=False for debugging)
-            self.browser = await p.chromium.launch(headless=True)
-            self.context = await self.browser.new_context(
+            # Launch browser (headless=True for GitHub Actions)
+            browser = await p.chromium.launch(headless=True)
+            context = await browser.new_context(
                 user_agent='Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36'
             )
-            self.page = await self.context.new_page()
+            page = await context.new_page()
 
             # Go to the live TV page
             print("🌐 Navigating to toffeelive.com...")
-            await self.page.goto('https://toffeelive.com/en/live', wait_until='networkidle')
-            await asyncio.sleep(5)  # Wait for dynamic content
+            await page.goto('https://toffeelive.com/en/live', wait_until='networkidle')
+            await page.wait_for_timeout(5000)  # Wait for dynamic content
 
-            # Extract channel list from the page
+            # 1. Extract channel list
             print("📺 Extracting channel list...")
-            channels_data = await self.get_channels_from_page()
+            channels_data = await self.get_channels_from_page(page)
             print(f"   Found {len(channels_data)} channels")
 
-            # For each channel, capture fresh cookies and construct URL
-            print("🍪 Capturing fresh cookies and constructing URLs...")
-            for idx, channel in enumerate(channels_data):
-                print(f"   [{idx+1}/{len(channels_data)}] Processing: {channel['name']}")
-                
-                # Get fresh cookies for this session
-                cookies = await self.context.cookies()
-                cookie_string = '; '.join([f"{c['name']}={c['value']}" for c in cookies])
-                
-                # Construct the correct stream URL pattern (based on your working example)
+            # 2. Get fresh cookies and user-agent
+            cookies = await context.cookies()
+            self.cookie_string = '; '.join([f"{c['name']}={c['value']}" for c in cookies])
+            self.user_agent = await page.evaluate('navigator.userAgent')
+            print(f"🍪 Fresh cookies captured: {self.cookie_string[:100]}...")
+
+            # 3. Construct channels with correct URL pattern
+            for channel in channels_data:
                 # Convert channel name to URL-friendly format (e.g., "Ekattor TV" -> "ekattor_tv")
                 url_slug = channel['name'].lower().replace(' ', '_')
                 stream_url = f"https://bldcmprod-cdn.toffeelive.com/cdn/live/{url_slug}/playlist.m3u8"
                 
-                channel['stream_url'] = stream_url
-                channel['cookie'] = cookie_string
-                channel['user_agent'] = 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36'
-                
-                self.channels.append(channel)
-                
-                # Small delay to be gentle
-                await asyncio.sleep(0.5)
+                self.channels.append({
+                    'id': channel['id'],
+                    'name': channel['name'],
+                    'logo': channel['logo'],
+                    'stream_url': stream_url,
+                    'group_title': self.detect_group_title(channel['name'])
+                })
 
-            await self.browser.close()
+            await browser.close()
             print(f"✅ Successfully processed {len(self.channels)} channels")
 
-    async def get_channels_from_page(self) -> List[Dict]:
+    async def get_channels_from_page(self, page) -> List[Dict]:
         """Extract channel ID, name, and logo from the page"""
         channels = []
         
         # Find all channel links
-        links = await self.page.query_selector_all('a[href*="/watch/"]')
+        links = await page.query_selector_all('a[href*="/watch/"]')
         
         for link in links:
             href = await link.get_attribute('href')
             if href:
-                # Extract channel ID from URL
                 channel_id = href.split('/watch/')[-1].split('?')[0]
                 
                 # Get logo and name from image
@@ -80,48 +76,52 @@ class ToffeeScraper:
                 if img:
                     name = await img.get_attribute('alt') or 'Unknown'
                     logo = await img.get_attribute('src') or ''
+                    # Clean logo URL if needed
+                    if logo and 'w_480' in logo:
+                        logo = logo.replace('w_480', 'f_png,w_300,q_85')
                 else:
                     name = 'Unknown'
                     logo = ''
                 
-                # Avoid duplicates
                 if not any(c['id'] == channel_id for c in channels):
                     channels.append({
                         'id': channel_id,
-                        'name': name,
+                        'name': name.strip(),
                         'logo': logo,
                     })
         
         return channels
 
+    def detect_group_title(self, name: str) -> str:
+        """Detect group title based on channel name"""
+        name_lower = name.lower()
+        if any(word in name_lower for word in ['sports', 'cricket', 'football', 'epl', 'ten']):
+            return "স্পোর্টস চ্যানেল"
+        elif any(word in name_lower for word in ['news', 'somoy', 'jamuna', 'ekattor', 'independent', 'global', 'channel']):
+            return "বাংলাদেশি চ্যানেল"
+        elif any(word in name_lower for word in ['movie', 'cinema', 'film', 'max', 'pix', 'action', 'bollywood']):
+            return "সিনেমা চ্যানেল"
+        elif any(word in name_lower for word in ['kids', 'cartoon', 'pogo', 'discovery', 'animal planet']):
+            return "কিডস চ্যানেল"
+        else:
+            return "বিনোদন চ্যানেল"
+
     def generate_m3u8(self) -> str:
-        """Generate M3U8 content with cookies and headers"""
+        """Generate M3U8 content with proper headers and cookies"""
         lines = ['#EXTM3U']
         
         for channel in self.channels:
-            # Determine group title based on channel name
-            group_title = "Live TV"
-            if any(word in channel['name'].lower() for word in ['sports', 'cricket', 'football', 'epl']):
-                group_title = "Sports"
-            elif any(word in channel['name'].lower() for word in ['news', 'somoy', 'jamuna', 'ekattor']):
-                group_title = "News"
-            elif any(word in channel['name'].lower() for word in ['movie', 'cinema', 'film', 'max', 'pix']):
-                group_title = "Movies"
-            elif any(word in channel['name'].lower() for word in ['kids', 'cartoon', 'pogo']):
-                group_title = "Kids"
-            else:
-                group_title = "Entertainment"
-            
             # EXTINF line
-            extinf = f'#EXTINF:-1 group-title="{group_title}" tvg-id="{channel["id"]}" tvg-name="{channel["name"]}" tvg-logo="{channel["logo"]}", {channel["name"]}'
+            extinf = f'#EXTINF:-1 group-title="{channel["group_title"]}" tvg-id="{channel["id"]}" tvg-name="{channel["name"]}" tvg-logo="{channel["logo"]}", {channel["name"]}'
             lines.append(extinf)
             
             # User-Agent header
-            lines.append(f'#EXTVLCOPT:http-user-agent={channel["user_agent"]}')
+            lines.append(f'#EXTVLCOPT:http-user-agent={self.user_agent}')
             
-            # Cookie header (if available)
-            if channel.get('cookie'):
-                lines.append(f'#EXTHTTP:{{"cookie":"{channel["cookie"]}"}}')
+            # Cookie header (only if cookie string is not empty)
+            if self.cookie_string:
+                cookie_json = json.dumps({"cookie": self.cookie_string})
+                lines.append(f'#EXTHTTP:{cookie_json}')
             
             # Stream URL
             lines.append(channel['stream_url'])
@@ -136,9 +136,11 @@ class ToffeeScraper:
         with open('toffee.m3u', 'w', encoding='utf-8') as f:
             f.write(m3u_content)
         
-        # Save JSON
+        # Save JSON (for debugging or alternative use)
         json_output = {
             "generated_at": datetime.now().isoformat(),
+            "user_agent": self.user_agent,
+            "cookie": self.cookie_string,
             "total_channels": len(self.channels),
             "channels": self.channels
         }
