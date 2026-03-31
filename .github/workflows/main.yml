@@ -2,14 +2,18 @@ name: Refresh Toffee Live Channels
 
 on:
   schedule:
-    - cron: '0  * * * *'
-  workflow_dispatch:
+    # প্রতি 6 ঘণ্টায় রান হবে
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # ম্যানুয়াল রানের জন্য
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
       
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -21,23 +25,24 @@ jobs:
           pip install playwright
           playwright install chromium
       
-      - name: Run scraper
-        run: python main.py
-        continue-on-error: false
+      - name: Run scraper with real-time output
+        run: |
+          python main.py 2>&1 | tee scraper.log
       
       - name: Show summary
         if: always()
         run: |
-          echo "📊 Scraping Summary:"
+          echo "📊 SCRAPING SUMMARY"
           echo "=================="
           if [ -f toffee.json ]; then
-            echo "✓ toffee.json created"
-            echo "✓ toffee-ott-navigator.m3u created"
-            echo "✓ toffee-nsplayer.m3u created"
             CHANNELS=$(python -c "import json; print(len(json.load(open('toffee.json'))['channels']))")
-            echo "📺 Total channels: $CHANNELS"
-          else
-            echo "❌ No output files created"
+            echo "✅ Total channels: $CHANNELS"
+          fi
+          if [ -f scraper.log ]; then
+            echo ""
+            echo "📝 Last 20 lines of log:"
+            echo "-----------------------"
+            tail -20 scraper.log
           fi
       
       - name: Commit and push changes
@@ -45,6 +50,6 @@ jobs:
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add toffee*.m3u toffee.json
+          git add toffee-ott-navigator.m3u toffee-nsplayer.m3u toffee.json
           git diff --staged --quiet || git commit -m "Auto-update: $(date -u +'%Y-%m-%d %H:%M:%S')"
           git push
