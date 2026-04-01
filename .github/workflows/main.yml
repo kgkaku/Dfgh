@@ -2,47 +2,38 @@ name: Auto-Update Toffee Playlist
 
 on:
   schedule:
-    # প্রতি ৭ ঘণ্টা অন্তর (মিনিট ০-তে) – UTC 00,07,14,21
     - cron: '0 */7 * * *'
-  workflow_dispatch:   # ম্যানুয়াল রানের সুবিধা
+  workflow_dispatch:
 
 jobs:
   update-playlist:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # কমিট ও পুশ করার অনুমতি
+      contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip'
-
+      
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
-          playwright install chromium
-          # শুধুমাত্র প্রয়োজনীয় সিস্টেম ডিপেন্ডেন্সি ইনস্টল
-          sudo apt-get update
-          sudo apt-get install -y libgbm1
-
+          pip install playwright
+          playwright install chromium --with-deps
+      
       - name: Run scraper
         run: python main.py
-
-      - name: Commit and push changes
+        env:
+          PYTHONUNBUFFERED: 1
+      
+      - name: Commit and push
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add toffee-nsplayer.m3u toffee-ott-navigator.m3u toffee.json
+          git add toffee-*.m3u toffee.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update Toffee playlist ($(date -u +'%Y-%m-%d %H:%M:%S UTC'))"
+            git commit -m "Auto-update $(date -u +'%Y-%m-%d %H:%M') UTC"
             git push
-          else
-            echo "No changes to commit."
           fi
