@@ -2,14 +2,14 @@ name: Refresh Tamasha Playlist
 
 on:
   schedule:
-    - cron: '0 * * * *' # প্রতি ঘণ্টায় অটোমেটিক চলবে
-  workflow_dispatch: # ম্যানুয়ালি রান করার অপশন
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # ফাইল সেভ করার জন্য এই পারমিশন জরুরি
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -20,14 +20,13 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: pip install requests
+      - name: Install Cloudscraper
+        # এখানে আমরা cloudscraper ইন্সটল করছি যা বট ডিটেকশন বাইপাস করবে
+        run: pip install cloudscraper
 
       - name: Run python main.py
         env:
-          # এই অংশটিই আপনার টোকেনগুলোকে পাইথনের কাছে পৌঁছে দেয়
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           USER_COOKIE: ${{ secrets.USER_COOKIE }}
         run: python main.py
 
@@ -35,6 +34,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add tamashaweb.m3u tamashaweb.json
+          git add tamashaweb.m3u || echo "No m3u file"
           git commit -m "Automated Playlist Refresh" || echo "No changes to commit"
           git push
