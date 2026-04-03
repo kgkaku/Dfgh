@@ -1,35 +1,37 @@
-name: Auto-Update Toffee Playlist
+name: Refresh Tamasha Playlist
 
 on:
   schedule:
-    - cron: '0 */7 * * *'
-  workflow_dispatch:
+    - cron: '0 * * * *' # প্রতি ঘণ্টায় চলবে
+  workflow_dispatch: # ম্যানুয়ালি চালানোর অপশন
 
 jobs:
-  update-playlist:
+  refresh:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-
+      contents: write # গিটহাবে ফাইল পুশ করার পারমিশন
+    
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: actions/setup-python@v5
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-      
-      - name: Install dependencies
+          python-version: '3.11'
+
+      - name: Install Dependencies
         run: pip install requests
-      
-      - name: Run scraper
+
+      - name: Run Scraper
+        env:
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: python main.py
-      
-      - name: Commit and push
+
+      - name: Commit and Push Changes
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          git add toffee-*.m3u toffee.json 2>/dev/null || true
-          if ! git diff --cached --quiet; then
-            git commit -m "Auto-update $(date -u +'%Y-%m-%d %H:%M') UTC"
-            git push
-          fi
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add tamashaweb.m3u tamashaweb.json
+          git commit -m "Update playlist: $(date)" || echo "No changes to commit"
+          git push
