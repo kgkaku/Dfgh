@@ -2,36 +2,39 @@ name: Refresh Tamasha Playlist
 
 on:
   schedule:
-    - cron: '0 * * * *' # প্রতি ঘণ্টায় চলবে
-  workflow_dispatch: # ম্যানুয়ালি চালানোর অপশন
+    - cron: '0 * * * *' # প্রতি ঘণ্টায় অটোমেটিক চলবে
+  workflow_dispatch: # ম্যানুয়ালি রান করার অপশন
 
 jobs:
-  refresh:
+  build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # গিটহাবে ফাইল পুশ করার পারমিশন
-    
+      contents: write # ফাইল সেভ করার জন্য এই পারমিশন জরুরি
+
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: pip install requests
 
-      - name: Run Scraper
+      - name: Run python main.py
         env:
+          # এই অংশটিই আপনার টোকেনগুলোকে পাইথনের কাছে পৌঁছে দেয়
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          USER_COOKIE: ${{ secrets.USER_COOKIE }}
         run: python main.py
 
-      - name: Commit and Push Changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add tamashaweb.m3u tamashaweb.json
-          git commit -m "Update playlist: $(date)" || echo "No changes to commit"
+          git commit -m "Automated Playlist Refresh" || echo "No changes to commit"
           git push
