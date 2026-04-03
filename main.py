@@ -2,55 +2,53 @@ import requests
 import json
 import os
 
-# GitHub Secrets থেকে আনা
 AUTH_TOKEN = os.environ.get("AUTH_TOKEN")
 USER_COOKIE = os.environ.get("USER_COOKIE")
 
-# এই হেডারগুলো হুবহু একটি আসল অ্যান্ড্রয়েড ডিভাইসের মতো সাজানো
+# হুবহু ব্রাউজারের মতো সিকিউরিটি হেডার
 HEADERS = {
     "Authorization": f"Bearer {AUTH_TOKEN}",
-    "Cookie": USER_COOKIE,
-    "User-Agent": "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36",
+    "Cookie": USER_COOKIE if USER_COOKIE else "",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36",
     "Accept": "application/json, text/plain, */*",
     "X-Platform": "web",
     "Origin": "https://tamashaweb.com",
     "Referer": "https://tamashaweb.com/",
-    "sec-ch-ua-platform": '"Android"',
+    "sec-ch-ua": '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"',
     "sec-ch-ua-mobile": "?1",
-    "Connection": "keep-alive",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Accept-Language": "en-US,en;q=0.9"
+    "sec-ch-ua-platform": '"Android"',
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
 }
 
 def get_channels():
-    url = "https://web.jazztv.pk/alpha/api_gateway/v5/web/all-channels"
-    print("Sending request to Tamasha servers with mobile fingerprint...")
-    try:
-        # এখানে অবশ্যই POST এবং বডিতে {} পাঠাতে হবে
-        response = requests.post(url, headers=HEADERS, json={}, timeout=20)
-        
-        if response.status_code == 200:
-            res_json = response.json()
-            # তামাশা অনেক সময় ডাটা 'data' এর ভেতরে 'channels' কি-তে পাঠায়
-            data = res_json.get('data', [])
-            if isinstance(data, dict):
-                return data.get('channels', [])
-            return data
-        else:
-            print(f"Server Error: {response.status_code}")
-            return []
-    except Exception as e:
-        print(f"Connection Error: {e}")
-        return []
+    # এন্ডপয়েন্ট ১ (v5)
+    url_v5 = "https://web.jazztv.pk/alpha/api_gateway/v5/web/all-channels"
+    # ব্যাকআপ এন্ডপয়েন্ট ২ (v2 - এটি অনেক সময় বেশি কার্যকর)
+    url_v2 = "https://web.jazztv.pk/alpha/api_gateway/v2/web/all-channels"
+    
+    for url in [url_v5, url_v2]:
+        print(f"Trying to fetch from: {url}")
+        try:
+            response = requests.post(url, headers=HEADERS, json={}, timeout=20)
+            if response.status_code == 200:
+                res_data = response.json().get('data', [])
+                # যদি ডাটা ডিকশনারি হয়, তবে 'channels' কি চেক করবে
+                channels = res_data.get('channels', []) if isinstance(res_data, dict) else res_data
+                if channels and len(channels) > 0:
+                    return channels
+            print(f"No data from {url}, trying next...")
+        except:
+            continue
+    return []
 
 def get_stream(slug):
     url = "https://web.jazztv.pk/alpha/api_gateway/v5/web/get-channel-url"
-    payload = {"slug": slug, "type": "web"}
     try:
-        res = requests.post(url, headers=HEADERS, json=payload, timeout=15)
+        res = requests.post(url, headers=HEADERS, json={"slug": slug, "type": "web"}, timeout=15)
         return res.json().get('data', {}).get('stream_url', "")
-    except:
-        return ""
+    except: return ""
 
 if __name__ == "__main__":
     channels = get_channels()
@@ -61,6 +59,7 @@ if __name__ == "__main__":
             slug = ch.get('slug')
             title = ch.get('title') or ch.get('name')
             logo = ch.get('logo')
+            if not slug: continue
             
             url = get_stream(slug)
             if url:
@@ -68,10 +67,9 @@ if __name__ == "__main__":
                 m3u += f'#EXTVLCOPT:http-user-agent={HEADERS["User-Agent"]}\n'
                 m3u += f"{url}\n"
                 count += 1
-                print(f"Captured: {title}")
         
-        with open("tamashaweb.m3u", "w", encoding="utf-8") as f:
-            f.write(m3u)
-        print(f"Success! Processed {count} channels.")
+        with open("tamashaweb.m3u", "w", encoding="utf-8") as f: f.write(m3u)
+        print(f"Success! Captured {count} channels.")
     else:
-        print("Empty list received. Your AUTH_TOKEN or USER_COOKIE might be too old. Please refresh them from Mises browser.")
+        print("CRITICAL: Server returned empty list on all endpoints.")
+        print("Suggestion: Open Tamasha in Mises, Log out and Log in again, then get a fresh Token/Cookie.")
