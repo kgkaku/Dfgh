@@ -5,31 +5,30 @@ import os
 # GitHub Secrets থেকে টোকেন সংগ্রহ
 AUTH_TOKEN = os.environ.get("AUTH_TOKEN")
 
-# হেডার্স - এখানে আমরা আরও কিছু ফিল্ড যোগ করেছি যা ব্রাউজার ব্যবহার করে
 HEADERS = {
     "Authorization": f"Bearer {AUTH_TOKEN}",
     "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36",
     "Origin": "https://tamashaweb.com",
     "Referer": "https://tamashaweb.com/",
-    "Accept": "application/json, text/plain, */*"
+    "Accept": "application/json, text/plain, */*",
+    "Content-Type": "application/json",
+    "X-Platform": "web"
 }
 
 def get_all_channels():
-    # অনেক সময় এই এপিআই GET এর বদলে POST আশা করে, তাই আমরা দুটোই চেক করব
+    # আপনার লগ অনুযায়ী এটি GET রিকোয়েস্ট
     url = "https://web.jazztv.pk/alpha/api_gateway/v5/web/all-channels"
     try:
-        # প্রথমে GET দিয়ে ট্রাই করি
         response = requests.get(url, headers=HEADERS, timeout=15)
         
-        # যদি GET এ 405 দেয়, তবে POST দিয়ে ট্রাই করব
-        if response.status_code == 405:
-            response = requests.post(url, headers=HEADERS, timeout=15)
-            
         if response.status_code == 200:
-            return response.json().get('data', [])
+            data = response.json().get('data', [])
+            # অনেক সময় ডাটা সরাসরি লিস্ট না হয়ে 'channels' কি-র ভেতর থাকে
+            if isinstance(data, dict):
+                return data.get('channels', [])
+            return data
         else:
-            print(f"Error fetching channels: {response.status_code}")
-            print(f"Response: {response.text}") # কেন এরর দিচ্ছে তা দেখতে
+            print(f"Error: {response.status_code}")
             return []
     except Exception as e:
         print(f"Exception: {e}")
@@ -37,14 +36,14 @@ def get_all_channels():
 
 def get_stream_url(slug):
     url = "https://web.jazztv.pk/alpha/api_gateway/v5/web/get-channel-url"
-    # লক্ষ্য করুন: এখানে ডেটা 'payload' হিসেবে যাচ্ছে
+    # স্যাম্পল কার্ল অনুযায়ী এটি JSON পেলোড হতে পারে
     payload = {
         "slug": slug,
         "type": "web"
     }
     try:
-        # এই API টি অবশ্যই POST হতে হবে
-        response = requests.post(url, headers=HEADERS, data=payload, timeout=10)
+        # payload ডাটা হিসেবে না পাঠিয়ে json হিসেবে পাঠানো হচ্ছে (বেশি নির্ভরযোগ্য)
+        response = requests.post(url, headers=HEADERS, json=payload, timeout=10)
         if response.status_code == 200:
             return response.json().get('data', {}).get('stream_url', "")
     except:
@@ -56,9 +55,11 @@ def generate_files(channels):
     json_data = []
 
     for ch in channels:
-        name = ch.get('title', 'Unknown')
-        logo = ch.get('logo', '')
-        slug = ch.get('slug', '')
+        name = ch.get('title') or ch.get('name') or 'Unknown'
+        logo = ch.get('logo') or ch.get('image_url') or ''
+        slug = ch.get('slug') or ''
+        
+        if not slug: continue
         
         print(f"Processing: {name}")
         stream_url = get_stream_url(slug)
@@ -66,10 +67,16 @@ def generate_files(channels):
         if stream_url:
             m3u_content += f'#EXTINF:-1 tvg-id="{slug}" tvg-logo="{logo}",{name}\n'
             m3u_content += f'#EXTVLCOPT:http-user-agent={HEADERS["User-Agent"]}\n'
+            m3u_content += f'#EXTVLCOPT:http-referrer={HEADERS["Referer"]}\n'
             m3u_content += f"{stream_url}\n"
-            json_data.append({"name": name, "logo": logo, "url": stream_url})
+            
+            json_data.append({
+                "name": name,
+                "logo": logo,
+                "url": stream_url
+            })
 
-    # ফাইলগুলো রাইট করা হচ্ছে
+    # ফাইল সেভ করা
     with open("tamashaweb.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_content)
     with open("tamashaweb.json", "w", encoding="utf-8") as f:
@@ -77,14 +84,14 @@ def generate_files(channels):
 
 if __name__ == "__main__":
     if not AUTH_TOKEN:
-        print("AUTH_TOKEN is missing in Secrets!")
+        print("AUTH_TOKEN missing!")
     else:
         channels = get_all_channels()
-        if channels:
+        if channels and len(channels) > 0:
             generate_files(channels)
-            print("Done! Files created.")
+            print(f"Successfully processed {len(channels)} channels.")
         else:
-            # যদি ফাইল তৈরি না হয়, তবে গিটহাব অ্যাকশন যেন এরর না দেয় তার জন্য একটি খালি ফাইল তৈরি রাখা
-            open("tamashaweb.m3u", "a").close()
-            open("tamashaweb.json", "a").close()
-            print("No channels found to process.")
+            # ফাইল না পেলে গিটহাবের এরর এড়াতে ডামি ফাইল
+            with open("tamashaweb.m3u", "w") as f: f.write("#EXTM3U\n")
+            with open("tamashaweb.json", "w") as f: f.write("[]")
+            print("No channels were found. Please check AUTH_TOKEN.")
