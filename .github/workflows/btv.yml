@@ -21,7 +21,7 @@ jobs:
         run: pip install requests
 
       - name: Run Main Script
-        run: python main.py
+        run: python btv.py
 
       - name: Push Updates
         run: |
