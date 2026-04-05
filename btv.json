@@ -1,0 +1,164 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "বিটিভি",
+            "urlname": "BTV",
+            "url": "/channel/BTV",
+            "position": 1,
+            "type": "channel",
+            "status": "active"
+        },
+        {
+            "id": 2,
+            "name": "বিটিভি নিউজ",
+            "urlname": "BTV News",
+            "url": "/channel/BTV-News",
+            "position": 2,
+            "type": "channel",
+            "status": "active"
+        },
+        {
+            "id": 3,
+            "name": "বিটিভি চট্টগ্রাম",
+            "urlname": "BTV Chattogram",
+            "url": "/channel/BTV-Chattogram",
+            "position": 3,
+            "type": "channel",
+            "status": "active"
+        },
+        {
+            "id": 15,
+            "name": "সংসদ টেলিভিশন",
+            "urlname": "Sangsad Television",
+            "url": "/channel/Sangsad-Television",
+            "position": 4,
+            "type": "channel",
+            "status": "active"
+        }
+    ],
+    "slider": [
+        {
+            "identifier": "355ba051-9a60-48aa-adcf-5a6c64da8c5c",
+            "channel_name": "বিটিভ",
+            "urlname": "BTV",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1677040441406_BTVslider.png",
+            "type": "channel",
+            "position": 1
+        },
+        {
+            "identifier": "d96eb7f4-83c2-4472-9597-3568390a8ebf",
+            "channel_name": "বিটিভি নিউজ",
+            "urlname": "BTV News",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1735648543850_Banner.jpg",
+            "type": "channel",
+            "position": 2
+        },
+        {
+            "identifier": "a707f2dc-9704-413a-a67c-17c64a77c350",
+            "channel_name": "বিটিভি চট্টগ্রাম",
+            "urlname": "BTV Chattogram",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1676439535761_21.png",
+            "type": "channel",
+            "position": 3
+        },
+        {
+            "identifier": "9ee3b4f9-fd0a-47c5-a135-2575c5691613",
+            "channel_name": "সংসদ টেলিভিশন",
+            "urlname": "Sangsad Television",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1676439548785_19.png",
+            "type": "channel",
+            "position": 4
+        }
+    ],
+    "channel_list": [
+        {
+            "channel_id": 1,
+            "identifier": "355ba051-9a60-48aa-adcf-5a6c64da8c5c",
+            "channel_name": "বিটিভি",
+            "urlname": "BTV",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "poster": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_poster/1677040358634_BTVogo.png",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1677040441406_BTVslider.png",
+            "channel_type": "Bangla",
+            "base_url": "https://www.btvlive.gov.bd/live/",
+            "count_url": "http://209.58.168.113:1935/live/BTV/playlist.m3u8",
+            "is_home_content": "yes",
+            "home_content_position": 2,
+            "status": "online",
+            "country_restriction": "yes",
+            "country": "AL,DZ,AS,AD,AO,AI,AQ,AG,AR,AM,AW,AU,AT,AZ,BS,BH,BD,BB,BY,BE,BZ,BJ,BM,BT,BO,BA,BW,BV,BR,IO,BN,BG,BF,BI,KH,CM,CA,CV,KY,CF,TD,CL,CN,CX,CC,CO,KM,CG,CD,CK,CR,CI,HR,CU,CY,CZ,DK,DJ,DM,DO,EC,EG,SV,GQ,ER,EE,ET,FK,FO,FJ,FI,FR,GF,PF,TF,GA,GM,GE,DE,GH,GI,GR,GL,GD,GP,GU,GT,GG,GN,GW,GY,HT,HM,VA,HN,HK,HU,IS,IN,ID,IR,IQ,IE,IM,IL,IT,JM,JP,JE,JO,KZ,KE,KI,KP,KR,KW,KG,LA,LV,LB,LS,LR,LY,LI,LT,LU,MO,MK,MG,MW,MY,MV,ML,MT,MH,MQ,MR,MU,YT,MX,FM,MD,MC,MN,ME,MS,MA,MZ,MM,NA,NR,NP,NL,AN,NC,NZ,NI,NE,NG,NU,NF,MP,NO,OM,PK,PW,PS,PA,PG,PY,PE,PH,PN,PL,PT,PR,QA,RE,RO,RU,RW,SH,KN,LC,PM,VC,WS,SM,ST,SA,SN,RS,SC,SL,SG,SK,SI,SB,SO,ZA,GS,ES,LK,SD,SR,SJ,SZ,SE,CH,SY,TW,TJ,TZ,TH,TL,TG,TK,TO,TT,TN,TR,TM,TC,TV,UG,UA,AE,GB,US,UM,UY,UZ,VU,VE,VN,VG,VI,WF,EH,YE,ZM,ZW,AF,",
+            "is_slider": "yes",
+            "created_at": "2022-09-28T15:24:32.000Z",
+            "updated_at": "2025-09-10T10:21:08.000Z",
+            "country_restrict_img": "https://d38ll44lbmt52p.cloudfront.net/cms/error_image/Banner-1.png"
+        },
+        {
+            "channel_id": 2,
+            "identifier": "d96eb7f4-83c2-4472-9597-3568390a8ebf",
+            "channel_name": "বিটিভি নিউজ",
+            "urlname": "BTV News",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "poster": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_poster/1735648543857_Poster.jpg",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1735648543850_Banner.jpg",
+            "channel_type": "Bangla",
+            "base_url": "https://www.btvlive.gov.bd/live/",
+            "count_url": "http://209.58.168.113:1935/live/BTV/playlist.m3u8",
+            "is_home_content": "yes",
+            "home_content_position": 2,
+            "status": "online",
+            "country_restriction": "no",
+            "country": "",
+            "is_slider": "yes",
+            "created_at": "2022-09-28T15:26:11.000Z",
+            "updated_at": "2025-09-10T10:02:11.000Z",
+            "country_restrict_img": "https://d38ll44lbmt52p.cloudfront.net/cms/error_image/Banner-1.png"
+        },
+        {
+            "channel_id": 3,
+            "identifier": "a707f2dc-9704-413a-a67c-17c64a77c350",
+            "channel_name": "বিটিভি চট্টগ্রাম",
+            "urlname": "BTV Chattogram",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "poster": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_poster/1676193167149_3.png",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1676439535761_21.png",
+            "channel_type": "Bangla",
+            "base_url": "https://www.btvlive.gov.bd/live/",
+            "count_url": "http://209.58.168.113:1935/live/BTV/playlist.m3u8",
+            "is_home_content": "yes",
+            "home_content_position": 2,
+            "status": "online",
+            "country_restriction": "no",
+            "country": "",
+            "is_slider": "yes",
+            "created_at": "2022-09-28T15:26:40.000Z",
+            "updated_at": "2025-09-10T10:21:12.000Z",
+            "country_restrict_img": "https://d38ll44lbmt52p.cloudfront.net/cms/error_image/Banner-1.png"
+        },
+        {
+            "channel_id": 4,
+            "identifier": "9ee3b4f9-fd0a-47c5-a135-2575c5691613",
+            "channel_name": "সংসদ টেলিভিশন",
+            "urlname": "Sangsad Television",
+            "description": "বাংলাদেশ টেলিভিশন",
+            "poster": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_poster/1676193184888_2.png",
+            "banner": "https://d38ll44lbmt52p.cloudfront.net/cms/channel_banner/1676439548785_19.png",
+            "channel_type": "Bangla",
+            "base_url": "https://www.btvlive.gov.bd/live/",
+            "count_url": "http://209.58.168.113:1935/live/BTV/playlist.m3u8",
+            "is_home_content": "yes",
+            "home_content_position": 2,
+            "status": "online",
+            "country_restriction": "no",
+            "country": "",
+            "is_slider": "yes",
+            "created_at": "2022-09-28T15:27:15.000Z",
+            "updated_at": "2025-09-10T10:02:08.000Z",
+            "country_restrict_img": "https://d38ll44lbmt52p.cloudfront.net/cms/error_image/Banner-1.png"
+        }
+    ]
+}
