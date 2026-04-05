@@ -6,6 +6,7 @@ from datetime import datetime
 
 # বিটিভি এর সিডিএন এবং মেইন ইউআরএল
 BASE_URL = "https://www.btvlive.gov.bd"
+BTV_NEWS_POSTER = "https://d38ll44lbmt52p.cloudfront.net/cms/channel_poster/1735648543857_Poster.jpg"
 
 def get_build_id():
     """স্বয়ংক্রিয়ভাবে লেটেস্ট Build ID খুঁজে বের করার ফাংশন"""
@@ -39,7 +40,6 @@ def fetch_and_generate():
     final_channels = []
 
     for display_name, slug in channels_to_fetch.items():
-        # JSON API URL যা থেকে সব তথ্য পাওয়া যাবে
         api_url = f"{BASE_URL}/_next/data/{build_id}/channel/{slug}.json?id={slug}"
         
         try:
@@ -49,20 +49,27 @@ def fetch_and_generate():
                 page_props = json_data.get('pageProps', {})
                 channel_info = page_props.get('channel', {})
                 
-                # ১. লোগো ইউআরএল সংগ্রহ (JSON থেকে)
-                raw_logo = channel_info.get('poster', '')
-                if raw_logo:
-                    # যদি পাথ cms/ দিয়ে শুরু হয় তবে বেস ইউআরএল যোগ হবে
-                    logo_url = f"{BASE_URL}/{raw_logo.lstrip('/')}"
+                # ১. লোগো/পোস্টার সেটআপ
+                if display_name == "BTV News":
+                    # বিটিভি নিউজ এর জন্য আপনার দেওয়া নির্দিষ্ট লিংক
+                    logo_url = BTV_NEWS_POSTER
                 else:
-                    logo_url = ""
+                    # বাকিদের জন্য সরাসরি poster সেকশন থেকে
+                    raw_poster = channel_info.get('poster', '')
+                    if raw_poster:
+                        # যদি সিডিএন লিংক না থাকে তবে ডোমেইন যোগ করা হবে
+                        if raw_poster.startswith('http'):
+                            logo_url = raw_poster
+                        else:
+                            logo_url = f"https://d38ll44lbmt52p.cloudfront.net/{raw_poster.lstrip('/')}"
+                    else:
+                        logo_url = ""
 
-                # ২. স্ট্রিম ইউআরএল এর userId এবং identifier সংগ্রহ
+                # ২. স্ট্রিম ইউআরএল প্রসেসিং
                 source_url = page_props.get('sourceURL', '')
                 identifier = channel_info.get('identifier', slug)
-                user_country = "BD" # আপনার রিকোয়েস্ট অনুযায়ী ফিক্সড
+                user_country = "BD" 
 
-                # Regex দিয়ে userId বের করা
                 match = re.search(r'/[^/]+/([^/]+)/index\.m3u8$', source_url)
                 if match:
                     user_id = match.group(1)
@@ -74,16 +81,14 @@ def fetch_and_generate():
                         'logo': logo_url,
                         'url': stream_link
                     })
-                    print(f"✅ Successfully fetched: {display_name}")
-            else:
-                print(f"⚠️ Could not fetch {display_name} (Status: {resp.status_code})")
+                    print(f"✅ Fetched: {display_name}")
         except Exception as e:
             print(f"❌ Error in {display_name}: {e}")
 
     if final_channels:
         update_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
-        # M3U জেনারেশন (ক্রেডিট + লোগো + কান্ট্রি কোড)
+        # M3U ফাইল তৈরি (ক্রেডিট + লোগো + কান্ট্রি কোড)
         m3u_header = (
             f"#EXTM3U\n"
             f"# Created by @kgkaku\n"
@@ -93,10 +98,8 @@ def fetch_and_generate():
         
         m3u_body = ""
         for ch in final_channels:
-            # tvg-logo এবং tvg-country ফিক্সড রাখা হয়েছে
             m3u_body += f'#EXTINF:-1 tvg-id="{ch["id"]}" tvg-name="{ch["name"]}" tvg-logo="{ch["logo"]}" tvg-country="BD", {ch["name"]}\n{ch["url"]}\n\n'
         
-        # ফাইল সেভ করা
         with open('btv.m3u', 'w', encoding='utf-8') as f:
             f.write(m3u_header + m3u_body)
 
@@ -104,11 +107,11 @@ def fetch_and_generate():
             json.dump({
                 "credits": "@kgkaku",
                 "last_updated": update_time,
-                "total": len(final_channels),
+                "total_channels": len(final_channels),
                 "channels": final_channels
             }, f, indent=4, ensure_ascii=False)
 
-        print(f"📊 Completed! Total {len(final_channels)} channels added to btv.m3u")
+        print(f"📊 Success! btv.m3u updated by @kgkaku")
 
 if __name__ == "__main__":
     fetch_and_generate()
