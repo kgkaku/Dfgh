@@ -6,6 +6,7 @@ from datetime import datetime
 
 # বিটিভি এর সিডিএন এবং মেইন ইউআরএল
 BASE_URL = "https://www.btvlive.gov.bd"
+CDN_BASE = "https://d38ll44lbmt52p.cloudfront.net" # এটিই পোস্টার লোড করার মূল লিংক
 BTV_NEWS_POSTER = "https://d38ll44lbmt52p.cloudfront.net/cms/channel_poster/1735648543857_Poster.jpg"
 
 def get_build_id():
@@ -49,19 +50,15 @@ def fetch_and_generate():
                 page_props = json_data.get('pageProps', {})
                 channel_info = page_props.get('channel', {})
                 
-                # ১. লোগো/পোস্টার সেটআপ
+                # ১. লোগো/পোস্টার ইউআরএল তৈরি (ম্যাপিং ফিক্স)
                 if display_name == "BTV News":
-                    # বিটিভি নিউজ এর জন্য আপনার দেওয়া নির্দিষ্ট লিংক
                     logo_url = BTV_NEWS_POSTER
                 else:
-                    # বাকিদের জন্য সরাসরি poster সেকশন থেকে
                     raw_poster = channel_info.get('poster', '')
                     if raw_poster:
-                        # যদি সিডিএন লিংক না থাকে তবে ডোমেইন যোগ করা হবে
-                        if raw_poster.startswith('http'):
-                            logo_url = raw_poster
-                        else:
-                            logo_url = f"https://d38ll44lbmt52p.cloudfront.net/{raw_poster.lstrip('/')}"
+                        # যদি স্লাশ দিয়ে শুরু না হয় তবে স্লাশ যোগ করে সিডিএন বসানো হচ্ছে
+                        clean_path = raw_poster.lstrip('/')
+                        logo_url = f"{CDN_BASE}/{clean_path}"
                     else:
                         logo_url = ""
 
@@ -81,14 +78,14 @@ def fetch_and_generate():
                         'logo': logo_url,
                         'url': stream_link
                     })
-                    print(f"✅ Fetched: {display_name}")
+                    print(f"✅ Captured: {display_name} | Logo: {logo_url[:50]}...")
         except Exception as e:
             print(f"❌ Error in {display_name}: {e}")
 
     if final_channels:
         update_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
-        # M3U ফাইল তৈরি (ক্রেডিট + লোগো + কান্ট্রি কোড)
+        # M3U আউটপুট জেনারেশন (ক্রেডিট + লোগো + কান্ট্রি কোড)
         m3u_header = (
             f"#EXTM3U\n"
             f"# Created by @kgkaku\n"
@@ -98,6 +95,7 @@ def fetch_and_generate():
         
         m3u_body = ""
         for ch in final_channels:
+            # tvg-logo তে এখন পূর্ণাঙ্গ সিডিএন লিংক যাবে
             m3u_body += f'#EXTINF:-1 tvg-id="{ch["id"]}" tvg-name="{ch["name"]}" tvg-logo="{ch["logo"]}" tvg-country="BD", {ch["name"]}\n{ch["url"]}\n\n'
         
         with open('btv.m3u', 'w', encoding='utf-8') as f:
@@ -106,12 +104,11 @@ def fetch_and_generate():
         with open('btv.json', 'w', encoding='utf-8') as f:
             json.dump({
                 "credits": "@kgkaku",
-                "last_updated": update_time,
-                "total_channels": len(final_channels),
+                "updated": update_time,
                 "channels": final_channels
             }, f, indent=4, ensure_ascii=False)
 
-        print(f"📊 Success! btv.m3u updated by @kgkaku")
+        print(f"📊 Process Completed. All {len(final_channels)} channels saved with full logos.")
 
 if __name__ == "__main__":
     fetch_and_generate()
