@@ -28,21 +28,17 @@ HEADERS_TEMPLATE = {
 def fetch_channels():
     """Fetch live channels from DistroTV API with browser-like headers"""
     
-    # Try multiple endpoints
     endpoints = [
         "https://tv.jsrdn.com/tv_v5/getfeed.php?type=live",
-        "https://tv.jsrdn.com/tv_v5/getfeed.php?type=live&_=" + str(int(time.time())),
-        "https://www.distro.tv/api/live"
+        "https://tv.jsrdn.com/tv_v5/getfeed.php?type=live&_=" + str(int(time.time()))
     ]
     
     for endpoint in endpoints:
         try:
-            # Rotate user-agent
             headers = HEADERS_TEMPLATE.copy()
             headers["User-Agent"] = random.choice(USER_AGENTS)
             
             print(f"Trying endpoint: {endpoint}")
-            print(f"Using User-Agent: {headers['User-Agent'][:50]}...")
             
             response = requests.get(
                 endpoint, 
@@ -52,29 +48,43 @@ def fetch_channels():
             )
             
             print(f"Response Status: {response.status_code}")
-            print(f"Response Headers: {dict(response.headers)}")
             
             if response.status_code == 200:
-                # Try to parse JSON
                 try:
                     data = response.json()
                     print(f"JSON parsed successfully. Keys: {list(data.keys())}")
                     
-                    # Check different possible data structures
-                    if "live" in data:
-                        channels = data.get("live", [])
-                    elif "channels" in data:
-                        channels = data.get("channels", [])
-                    elif "data" in data:
-                        channels = data.get("data", [])
-                    else:
+                    # Handle different data structures
+                    channels = []
+                    
+                    # Check if 'shows' key exists (from your log)
+                    if "shows" in data and isinstance(data["shows"], list):
+                        channels = data["shows"]
+                        print(f"Found {len(channels)} channels in 'shows'")
+                    
+                    # Check other possible keys
+                    elif "live" in data and isinstance(data["live"], list):
+                        channels = data["live"]
+                        print(f"Found {len(channels)} channels in 'live'")
+                    
+                    elif "channels" in data and isinstance(data["channels"], list):
+                        channels = data["channels"]
+                        print(f"Found {len(channels)} channels in 'channels'")
+                    
+                    elif "data" in data and isinstance(data["data"], list):
+                        channels = data["data"]
+                        print(f"Found {len(channels)} channels in 'data'")
+                    
+                    elif isinstance(data, list):
                         channels = data
+                        print(f"Found {len(channels)} channels in root array")
                     
                     if channels and len(channels) > 0:
-                        print(f"Found {len(channels)} channels")
+                        print(f"Sample channel keys: {list(channels[0].keys()) if channels else []}")
                         return channels
                     else:
-                        print("No channels in response")
+                        print("No channels found in response")
+                        print(f"Response structure: {json.dumps(data, indent=2)[:500]}")
                         
                 except json.JSONDecodeError as e:
                     print(f"JSON decode error: {e}")
@@ -86,45 +96,63 @@ def fetch_channels():
             print(f"Request failed: {e}")
             continue
     
-    # If all endpoints fail, try to parse from HTML as fallback
-    print("Trying fallback: scraping from HTML...")
-    return fetch_from_html_fallback()
+    return []
 
-def fetch_from_html_fallback():
-    """Fallback: Try to extract channel data from HTML response"""
-    try:
-        headers = HEADERS_TEMPLATE.copy()
-        headers["User-Agent"] = random.choice(USER_AGENTS)
-        
-        response = requests.get("https://www.distro.tv/live/", headers=headers, timeout=30)
-        
-        if response.status_code == 200:
-            # Look for JavaScript variables containing channel data
-            import re
-            html = response.text
-            
-            # Try to find channel data in script tags
-            patterns = [
-                r'var\s+channels\s*=\s*(\[.*?\]);',
-                r'window\.__INITIAL_STATE__\s*=\s*({.*?});',
-                r'liveChannels\s*:\s*(\[.*?\])'
-            ]
-            
-            for pattern in patterns:
-                matches = re.search(pattern, html, re.DOTALL)
-                if matches:
-                    try:
-                        data = json.loads(matches.group(1))
-                        print(f"Found channel data in HTML via pattern: {pattern}")
-                        return data if isinstance(data, list) else data.get('channels', [])
-                    except:
-                        pass
-            
-            print("Could not extract channel data from HTML")
-            return []
-    except Exception as e:
-        print(f"Fallback failed: {e}")
-        return []
+def extract_channel_info(channel):
+    """Extract channel information from various possible field names"""
+    info = {
+        "id": "",
+        "name": "",
+        "logo": "",
+        "stream_url": "",
+        "token": "",
+        "category": "",
+        "genre": ""
+    }
+    
+    # Try different possible field names for ID
+    for key in ["id", "channel_id", "show_id", "sid"]:
+        if key in channel and channel[key]:
+            info["id"] = str(channel[key])
+            break
+    
+    # Try different possible field names for Name
+    for key in ["name", "title", "channel_name", "show_name", "display_name"]:
+        if key in channel and channel[key]:
+            info["name"] = channel[key]
+            break
+    
+    # Try different possible field names for Logo
+    for key in ["logo", "image", "thumbnail", "poster", "thumb"]:
+        if key in channel and channel[key]:
+            info["logo"] = channel[key]
+            break
+    
+    # Try different possible field names for Stream URL
+    for key in ["stream_url", "url", "hls_url", "playlist_url", "m3u8"]:
+        if key in channel and channel[key]:
+            info["stream_url"] = channel[key]
+            break
+    
+    # Try different possible field names for Token
+    for key in ["token", "access_token", "api_token", "auth_token"]:
+        if key in channel and channel[key]:
+            info["token"] = channel[key]
+            break
+    
+    # Try different possible field names for Category
+    for key in ["category", "group", "genre_group", "section"]:
+        if key in channel and channel[key]:
+            info["category"] = channel[key]
+            break
+    
+    # Try different possible field names for Genre
+    for key in ["genre", "categories", "tags", "type"]:
+        if key in channel and channel[key]:
+            info["genre"] = channel[key]
+            break
+    
+    return info
 
 def generate_m3u(channels, filename="distrotv.m3u"):
     """Generate M3U file with channel information"""
@@ -136,35 +164,37 @@ def generate_m3u(channels, filename="distrotv.m3u"):
         f.write(f"# total Channels: {len(channels)}\n\n")
         
         # Write each channel
+        valid_channels = 0
         for idx, channel in enumerate(channels, 1):
-            # Try different possible field names
-            name = channel.get("name") or channel.get("title") or channel.get("channel_name") or f"Channel {idx}"
-            logo = channel.get("logo") or channel.get("image") or channel.get("thumbnail") or ""
-            url = channel.get("stream_url") or channel.get("url") or channel.get("hls_url") or ""
-            token = channel.get("token") or channel.get("access_token") or ""
-            category = channel.get("category") or channel.get("group") or channel.get("genre_group") or ""
-            genre = channel.get("genre") or channel.get("categories") or ""
-            channel_id = channel.get("id") or channel.get("channel_id") or str(idx)
+            info = extract_channel_info(channel)
             
-            if url:
-                # Clean up URL if needed
-                if not url.startswith("http"):
-                    url = "https:" + url if url.startswith("//") else url
-                
-                f.write(f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{name}" tvg-logo="{logo}" '
-                       f'group-title="{category}" tvg-token="{token}" tvg-genre="{genre}",{name}\n')
-                f.write(f"{url}\n")
+            if info["stream_url"]:
+                valid_channels += 1
+                f.write(f'#EXTINF:-1 tvg-id="{info["id"]}" tvg-name="{info["name"]}" tvg-logo="{info["logo"]}" '
+                       f'group-title="{info["category"]}" tvg-token="{info["token"]}" tvg-genre="{info["genre"]}",{info["name"]}\n')
+                f.write(f"{info['stream_url']}\n")
+            else:
+                print(f"Warning: Channel {idx} ({info['name']}) has no stream URL")
+        
+        # Update total channels count in header
+        if valid_channels != len(channels):
+            print(f"Only {valid_channels} out of {len(channels)} channels have valid stream URLs")
     
-    print(f"M3U saved to {filename} with {len(channels)} channels")
-    return len(channels)
+    print(f"M3U saved to {filename} with {valid_channels} channels")
 
 def generate_json(channels, filename="distrotv.json"):
     """Generate JSON file with complete channel data"""
+    # Extract clean info for all channels
+    clean_channels = []
+    for channel in channels:
+        clean_channels.append(extract_channel_info(channel))
+    
     output_data = {
         "generated_by": "@kgkaku",
         "time": datetime.now().isoformat(),
-        "total_channels": len(channels),
-        "channels": channels
+        "total_channels": len(clean_channels),
+        "channels": clean_channels,
+        "raw_data_sample": channels[0] if channels else None  # Include raw data for debugging
     }
     
     with open(filename, "w", encoding="utf-8") as f:
@@ -172,13 +202,14 @@ def generate_json(channels, filename="distrotv.json"):
     
     print(f"JSON saved to {filename}")
 
-def save_debug_info(channels):
+def save_debug_info(data):
     """Save debug information for troubleshooting"""
     debug_info = {
         "timestamp": datetime.now().isoformat(),
-        "channel_count": len(channels),
-        "sample_channel": channels[0] if channels else None,
-        "all_keys": list(channels[0].keys()) if channels else []
+        "data_type": str(type(data)),
+        "data_length": len(data) if hasattr(data, '__len__') else 0,
+        "sample_data": data[0] if data and len(data) > 0 else None,
+        "sample_data_keys": list(data[0].keys()) if data and len(data) > 0 and isinstance(data[0], dict) else []
     }
     
     with open("debug_info.json", "w", encoding="utf-8") as f:
@@ -195,7 +226,6 @@ def main():
     
     if not channels:
         print("No channels found. Creating empty files as fallback.")
-        channels = []
         # Create empty files with just headers
         with open("distrotv.m3u", "w", encoding="utf-8") as f:
             f.write("#EXTM3U\n")
@@ -218,14 +248,17 @@ def main():
     
     print(f"Found {len(channels)} channels")
     
-    # Save debug info
-    save_debug_info(channels)
+    # Save debug info (safe handling)
+    try:
+        save_debug_info(channels)
+    except Exception as e:
+        print(f"Could not save debug info: {e}")
     
     # Generate output files
-    m3u_count = generate_m3u(channels)
+    generate_m3u(channels)
     generate_json(channels)
     
-    print(f"Channel refresh completed successfully. Processed {m3u_count} channels.")
+    print(f"Channel refresh completed successfully.")
 
 if __name__ == "__main__":
     main()
