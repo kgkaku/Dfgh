@@ -36,7 +36,7 @@ jobs:
         pip install requests
     
     - name: Run IRIB Extractor
-      run: python irirb.py
+      run: python irib.py
     
     - name: Commit and push changes
       run: |
