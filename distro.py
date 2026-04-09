@@ -4,6 +4,7 @@ from datetime import datetime
 import time
 import random
 import re
+import uuid
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -20,9 +21,9 @@ HEADERS = {
 
 def master_to_manifest(master_url):
     """
-    Convert master.m3u8 URL to working manifest URL
-    Example: /v1/master/.../channel-name/master.m3u8?params
-    becomes: /v1/manifest/.../channel-name/uuid/0.m3u8
+    Correctly convert master.m3u8 URL to working manifest URL
+    Example Input: https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-masala/index.m3u8?ads.rnd=...
+    Example Output: https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-masala/{uuid}/0.m3u8
     """
     if not master_url or "/master/" not in master_url:
         return None
@@ -30,18 +31,17 @@ def master_to_manifest(master_url):
     # Remove query parameters
     base_url = master_url.split("?")[0]
     
-    # Extract path between /master/ and /master.m3u8
-    match = re.search(r'/master/(.+?)/[^/]+\.m3u8$', base_url)
+    # Extract the path after /master/ and before the last .m3u8
+    # Expected format: /v1/master/HASH/channel-name/index.m3u8
+    match = re.search(r'/master/(.+?)/([^/]+)\.m3u8$', base_url)
     if not match:
         return None
     
-    channel_path = match.group(1)
-    
-    # Generate random UUID for manifest
-    import uuid
+    channel_path = match.group(1)  # This is the HASH/channel-name
     manifest_id = str(uuid.uuid4())
     
-    # Construct manifest URL (try different resolutions)
+    # Construct the correct manifest URL
+    # Replace /master/ with /manifest/ and add /{uuid}/0.m3u8 at the end
     manifest_url = base_url.replace("/master/", f"/manifest/{channel_path}/{manifest_id}/0.m3u8")
     
     return manifest_url
@@ -86,18 +86,21 @@ def fetch_channels():
         # Convert to manifest URL
         manifest_url = master_to_manifest(master_url)
         if not manifest_url:
+            print(f"Failed to convert: {master_url}")
             continue
         
-        channel_info = {
-            "id": show_data.get("id", show_id),
-            "name": show_data.get("title", ""),
-            "logo": show_data.get("img_logo", ""),
-            "stream_url": manifest_url,
-            "category": show_data.get("categories", ""),
-            "genre": show_data.get("genre", ""),
-            "language": show_data.get("language", "")
-        }
-        channels.append(channel_info)
+        # Optional: Verify URL format (for debugging)
+        if manifest_url.count("/manifest/") != 1 or manifest_url.endswith(".m3u8"):
+            channel_info = {
+                "id": show_data.get("id", show_id),
+                "name": show_data.get("title", ""),
+                "logo": show_data.get("img_logo", ""),
+                "stream_url": manifest_url,
+                "category": show_data.get("categories", ""),
+                "genre": show_data.get("genre", ""),
+                "language": show_data.get("language", "")
+            }
+            channels.append(channel_info)
     
     print(f"Generated {len(channels)} manifest URLs")
     return channels
@@ -110,7 +113,9 @@ def generate_m3u(channels, filename="distrotv.m3u"):
         f.write(f"# total Channels: {len(channels)}\n\n")
         
         for ch in channels:
-            f.write(f'#EXTINF:-1 tvg-id="{ch["id"]}" tvg-name="{ch["name"]}" tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{ch["name"]}\n')
+            # Escape special characters in name
+            name = ch["name"].replace(",", "").replace("#", "")
+            f.write(f'#EXTINF:-1 tvg-id="{ch["id"]}" tvg-name="{name}" tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{name}\n')
             f.write(f"{ch['stream_url']}\n")
     
     print(f"M3U saved with {len(channels)} channels")
@@ -121,10 +126,15 @@ def main():
     
     if channels:
         generate_m3u(channels)
-        with open("distrotv.json", "w") as f:
-            json.dump({"time": datetime.now().isoformat(), "total": len(channels), "channels": channels}, f, indent=2)
+        with open("distrotv.json", "w", encoding="utf-8") as f:
+            json.dump({
+                "time": datetime.now().isoformat(),
+                "total": len(channels),
+                "channels": channels
+            }, f, indent=2)
+        print("Files generated successfully!")
     else:
-        print("No channels found")
+        print("No channels found. Check API response.")
 
 if __name__ == "__main__":
     main()
