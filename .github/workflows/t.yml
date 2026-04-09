@@ -1,0 +1,39 @@
+name: Refresh Toffee Playlist
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # প্রতি ঘণ্টায় UTC 0 মিনিটে
+  workflow_dispatch:       # ম্যানুয়াল রান
+
+permissions:
+  contents: write          # রিপোজিটরিতে পুশ করার অনুমতি
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run playlist generator
+        run: python main.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-refresh Toffee playlist (hourly)"
+          commit_user_name: "GitHub Action"
+          commit_user_email: "action@github.com"
+          commit_author: "GitHub Action <action@github.com>"
+          file_pattern: "toffee.m3u toffee.json"
+          skip_fetch: true
