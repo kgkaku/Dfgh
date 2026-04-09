@@ -1,40 +1,39 @@
 #!/usr/bin/env python3
 """
-Toffee Live TV Playlist Generator
-পেজিনেশন + প্লেব্যাক API (POST) + cookie হ্যান্ডলিং
+Toffee Live TV + Radio Playlist Generator
+- লাইভ টিভি: m3u8 + cookie
+- রেডিও: সরাসরি stream URL
 """
 
 import json
 import re
+import uuid
 import requests
 from datetime import datetime
 from typing import Dict, List, Optional
 
 # ========== কনফিগারেশন ==========
-BASE_URL = "https://content-prod.services.toffeelive.com/toffee/BD/DK/android-mobile"
-PLAYBACK_URL = "https://entitlement-prod.services.toffeelive.com/toffee/BD/DK/android-mobile/playback"
+# ⚠️ Reqable থেকে প্রাপ্ত nonce/hash (এক্সপায়ার হলে আপডেট করুন)
+HARDCODED_NONCE = "i35ZfFGloymxWjEg19Tc_wyR66sQ0afB3WmpTt4IZFo%3D%0A"
+HARDCODED_HASH = "eba79df7056e4bf369a981a78534ca26b1177994f71e71fcb292aea55789fef6ef4a86310aaa136642a49418afd5cad951a300a8d395fe3bed9f71c46c4aaf5843fc7e527567e264f199ca9f928b636e5776478d98a209479ad3be7fe5de2103c517bffd1680c137187827dcce756e8ef1e28aca05e86694092e8e793a45a32f55d11415fc62d556ac99344797b00a2e"
 
-# চ্যানেল লিস্টের এন্ডপয়েন্ট (পেজিনেশন সহ)
-# প্রথমে যে ইউআরএল থেকে page=1 পাওয়া যায় সেটি ব্যবহার করছি
-CHANNELS_ENDPOINT_TEMPLATE = "https://content-prod.services.toffeelive.com/toffee/BD/DK/android-mobile/rail/generic/editorial-dynamic/84a2451df95d2eb3d2b0d09c5fc34fb1?page={page}"
+BASE_CONTENT = "https://content-prod.services.toffeelive.com/toffee/BD/DK/android-mobile"
+DEVICE_REGISTER_URL = "https://prod-services.toffeelive.com/sms/v1/device/register"
+PLAYBACK_BASE = "https://entitlement-prod.services.toffeelive.com/toffee/BD/DK/android-mobile/playback"
+HOME_VIEW_URL = f"{BASE_CONTENT}/view/home"
 
-# হেডার (প্লেব্যাক ও চ্যানেল লিস্টের জন্য আলাদা)
+# ডিফল্ট লাইভ টিভি রেল হ্যাশ (হোমপেজ থেকে না পেলে ব্যবহার হবে)
+LIVE_TV_RAIL_HASH = "032cc9194378b850b2fec39c6386fd1f"
+
+# রেডিও এন্ডপয়েন্ট
+RADIO_ENDPOINT = f"{BASE_CONTENT}/rail/generic/editorial-dynamic?filters=v_type:channels;subType:radio"
+
 COMMON_HEADERS = {
     "User-Agent": "okhttp/5.1.0",
     "Accept-Encoding": "gzip",
     "Connection": "Keep-Alive"
 }
 
-# প্লেব্যাক API-র জন্য বিশেষ হেডার (আপনার দেওয়া রিকোয়েস্ট থেকে নেওয়া)
-PLAYBACK_HEADERS = {
-    "Host": "entitlement-prod.services.toffeelive.com",
-    "authorization": "Bearer eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL3RvZmZlZWxpdmUuY29tIiwiY291bnRyeSI6IklOIiwiZF9pZCI6ImM1M2EzYzRiLTg1MjktNDgzYi1hNWFkLTM2ZGI3MTdlOTFmNyIsImV4cCI6MTc3ODI3OTAyMywiaWF0IjoxNzc1NjQ5MjIzLCJpc3MiOiJ0b2ZmZWVsaXZlLmNvbSIsImp0aSI6IjE0Yjg2NGEyLWFjMmYtNDM1Yy04YTVmLTIzNDU3NGUyYjMyMl8xNzc1NjQ5MjIzIiwicHJvdmlkZXIiOiJ0b2ZmZWUiLCJyX2lkIjoiYzUzYTNjNGItODUyOS00ODNiLWE1YWQtMzZkYjcxN2U5MWY3Iiwic19pZCI6ImM1M2EzYzRiLTg1MjktNDgzYi1hNWFkLTM2ZGI3MTdlOTFmNyIsInRva2VuIjoiYWNjZXNzIiwidHlwZSI6ImRldmljZSJ9.kGXwQOYqAWYwRe2Oeh9okecKhoXarNlfJpDtqR48KXfhpO5WTEXR9xbMfWi5CN2OinsaOuixs6qmu-g4Ctly1A",
-    "content-type": "application/json; charset=utf-8",
-    "accept-encoding": "gzip",
-    "user-agent": "okhttp/5.1.0"
-}
-
-# গ্রুপ ম্যাপিং (genres বা অন্যান্য তথ্য থেকে গ্রুপ নির্ধারণ)
 GENRE_GROUP_MAP = {
     "Sports": "Sports Channels",
     "News": "News Channels",
@@ -46,175 +45,277 @@ GENRE_GROUP_MAP = {
 }
 DEFAULT_GROUP = "Live TV"
 
-# ========== ফাংশন ==========
-def fetch_page(page: int) -> Optional[dict]:
-    """একটি নির্দিষ্ট পেজ থেকে চ্যানেল লিস্ট ফেচ করে"""
-    url = CHANNELS_ENDPOINT_TEMPLATE.format(page=page)
+# ========== হেলপার ফাংশন ==========
+def generate_device_id() -> str:
+    return uuid.uuid4().hex[:16]
+
+def register_device(device_id: str) -> Optional[str]:
+    url = f"{DEVICE_REGISTER_URL}?nonce={HARDCODED_NONCE}&hash={HARDCODED_HASH}"
+    payload = {
+        "device_id": device_id,
+        "type": "mobile",
+        "provider": "toffee",
+        "os": "android",
+        "country": "IN",
+        "app_version": "8.8.0",
+        "os_version": "7.1.2"
+    }
+    headers = {
+        "Host": "prod-services.toffeelive.com",
+        "Content-Type": "application/json; charset=utf-8",
+        "Accept-Encoding": "gzip",
+        "User-Agent": "okhttp/5.1.0"
+    }
     try:
-        resp = requests.get(url, headers=COMMON_HEADERS, timeout=15)
-        if resp.status_code == 200:
-            return resp.json()
+        resp = requests.post(url, headers=headers, json=payload, timeout=15)
+        if resp.status_code != 200:
+            print(f"❌ Device registration failed: {resp.status_code}")
+            return None
+        data = resp.json()
+        if data.get("success") and "data" in data:
+            return data["data"]["access"]
         else:
-            print(f"⚠️ Page {page} returned {resp.status_code}")
+            print(f"❌ Unexpected response: {data}")
             return None
     except Exception as e:
-        print(f"❌ Page {page} error: {e}")
+        print(f"❌ Registration error: {e}")
         return None
 
-def get_all_channels() -> List[dict]:
-    """সব পেজ লুপ করে সব চ্যানেল সংগ্রহ করে"""
+def get_home_json(access_token: str) -> Optional[Dict]:
+    headers = {"Authorization": f"Bearer {access_token}", **COMMON_HEADERS}
+    try:
+        resp = requests.get(HOME_VIEW_URL, headers=headers, timeout=15)
+        if resp.status_code == 200:
+            return resp.json()
+    except Exception as e:
+        print(f"❌ Home view error: {e}")
+    return None
+
+def get_live_tv_rail_hash(home_json: Dict) -> str:
+    try:
+        for rail in home_json.get("rails", {}).get("list", []):
+            if rail.get("title") == "Live TV" and rail.get("layout") == "circularLayout":
+                api_path = rail.get("apiPath", "")
+                parts = api_path.split("/")
+                if len(parts) >= 4:
+                    return parts[3]
+    except:
+        pass
+    return LIVE_TV_RAIL_HASH
+
+def fetch_rail_page(rail_hash: str, page: int, access_token: str) -> Optional[List[Dict]]:
+    url = f"{BASE_CONTENT}/rail/generic/editorial-dynamic/{rail_hash}?page={page}"
+    headers = {"Authorization": f"Bearer {access_token}", **COMMON_HEADERS}
+    try:
+        resp = requests.get(url, headers=headers, timeout=15)
+        if resp.status_code == 200:
+            return resp.json().get("list", [])
+    except:
+        pass
+    return None
+
+def get_all_live_tv_channels(rail_hash: str, access_token: str) -> List[Dict]:
     all_channels = []
     page = 1
     while True:
-        print(f"📄 Fetching page {page}...")
-        data = fetch_page(page)
-        if not data or "list" not in data:
-            break
-        items = data["list"]
+        items = fetch_rail_page(rail_hash, page, access_token)
         if not items:
             break
-        all_channels.extend(items)
-        print(f"   Got {len(items)} channels (total so far: {len(all_channels)})")
+        live_items = [ch for ch in items if ch.get("subType") == "Live_TV"]
+        all_channels.extend(live_items)
+        print(f"   Page {page}: {len(live_items)} live TV (total {len(all_channels)})")
         page += 1
-        # নিরাপত্তার জন্য ২০ পেজের বেশি না
         if page > 20:
             break
     return all_channels
 
-def get_group_from_genres(genres: List[str]) -> str:
-    """জেনার থেকে গ্রুপ টাইটেল বের করে"""
-    for genre in genres:
-        for key, group in GENRE_GROUP_MAP.items():
-            if key.lower() in genre.lower():
-                return group
-    return DEFAULT_GROUP
-
-def get_playback_data(channel_id: str) -> Optional[Dict]:
-    """প্লেব্যাক API কল করে m3u8 url এবং cookie বের করে (POST মেথড)"""
-    url = f"{PLAYBACK_URL}/{channel_id}"
+def get_radio_channels(access_token: str) -> List[Dict]:
+    headers = {"Authorization": f"Bearer {access_token}", **COMMON_HEADERS}
     try:
-        # প্লেব্যাক রিকোয়েস্টে খালি JSON বডি
-        resp = requests.post(url, headers=PLAYBACK_HEADERS, json={}, timeout=15)
+        resp = requests.get(RADIO_ENDPOINT, headers=headers, timeout=15)
+        if resp.status_code == 200:
+            data = resp.json()
+            return data.get("list", [])
+        else:
+            print(f"⚠️ Radio endpoint returned {resp.status_code}")
+    except Exception as e:
+        print(f"❌ Radio fetch error: {e}")
+    return []
+
+def get_radio_stream_url(radio_ch: Dict) -> Optional[str]:
+    """
+    রেডিও চ্যানেল থেকে stream URL বের করে।
+    JSON-এ 'stream_url' অথবা 'media[0].url' অথবা 'media[0].mediaId' থাকতে পারে।
+    এখানে আমরা সরাসরি stream_url অথবা media url খুঁজব।
+    """
+    if "stream_url" in radio_ch:
+        return radio_ch["stream_url"]
+    media_list = radio_ch.get("media", [])
+    for media in media_list:
+        if "url" in media:
+            return media["url"]
+        # যদি শুধু mediaId থাকে, তাহলে সেটা দিয়ে ভিন্ন API কল লাগতে পারে।
+        # আপাতত None রিটার্ন করব, কারণ আমরা জানি না কোন API।
+    return None
+
+def get_playback_data(channel_id: str, access_token: str) -> Optional[Dict]:
+    url = f"{PLAYBACK_BASE}/{channel_id}"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json; charset=utf-8",
+        "User-Agent": "okhttp/5.1.0"
+    }
+    try:
+        resp = requests.post(url, headers=headers, json={}, timeout=15)
         if resp.status_code != 200:
-            print(f"❌ Playback failed for {channel_id}: {resp.status_code}")
+            print(f"❌ Playback failed {channel_id}: {resp.status_code}")
             return None
-        
         data = resp.json()
-        # m3u8 url বের করো
         stream_url = None
         try:
             stream_url = data["playbackDetails"]["data"][0]["url"]
-        except (KeyError, IndexError):
-            print(f"⚠️ No stream_url in response for {channel_id}")
+        except:
+            stream_url = data.get("stream_url")
+        if not stream_url:
             return None
-        
-        # cookie বের করো (set-cookie হেডার থেকে)
         cookie = None
         if "set-cookie" in resp.headers:
-            set_cookie = resp.headers["set-cookie"]
-            match = re.search(r'(Edge-Cache-Cookie=[^;]+)', set_cookie)
+            match = re.search(r'(Edge-Cache-Cookie=[^;]+)', resp.headers["set-cookie"])
             if match:
                 cookie = match.group(1)
-        
-        if not cookie:
-            print(f"⚠️ No cookie in response for {channel_id}")
-        
-        return {
-            "stream_url": stream_url,
-            "cookie": cookie
-        }
+        return {"stream_url": stream_url, "cookie": cookie}
     except Exception as e:
-        print(f"❌ Playback error for {channel_id}: {e}")
+        print(f"❌ Playback error {channel_id}: {e}")
         return None
 
 def escape_m3u_field(text: str) -> str:
-    """m3u এ কমা, স্পেস ইত্যাদি এস্কেপ করে"""
-    if ',' in text:
-        text = f'"{text}"'
-    return text
+    return f'"{text}"' if ',' in text else text
 
-# ========== মেইন ==========
 def main():
-    print("🔄 Fetching all live TV channels (paginated)...")
-    channels = get_all_channels()
-    print(f"✅ Total channels found: {len(channels)}")
-    
-    if not channels:
-        print("❌ No channels found. Exiting.")
+    print("🔄 Toffee Playlist Generator (Live TV + Radio)")
+
+    # 1. ডিভাইস রেজিস্ট্রেশন
+    device_id = generate_device_id()
+    print(f"📱 Device ID: {device_id}")
+    token = register_device(device_id)
+    if not token:
+        print("❌ No token, abort.")
         return
-    
-    m3u_lines = []
+
+    # 2. লাইভ টিভি রেল চিহ্নিতকরণ
+    home = get_home_json(token)
+    if home:
+        rail_hash = get_live_tv_rail_hash(home)
+    else:
+        rail_hash = LIVE_TV_RAIL_HASH
+    print(f"🎯 Live TV rail hash: {rail_hash}")
+
+    # 3. লাইভ টিভি চ্যানেল সংগ্রহ
+    print("\n📺 Fetching Live TV channels...")
+    live_channels = get_all_live_tv_channels(rail_hash, token)
+    print(f"✅ Found {len(live_channels)} live TV channels")
+
+    # 4. রেডিও চ্যানেল সংগ্রহ
+    print("\n📻 Fetching Radio channels...")
+    radio_channels = get_radio_channels(token)
+    print(f"✅ Found {len(radio_channels)} radio channels")
+
+    # 5. m3u লাইন তৈরি
+    m3u_lines = ["#EXTM3U"]
     json_output = {"generated": datetime.utcnow().isoformat(), "channels": []}
-    
-    # শুধুমাত্র subType Live_TV ফিল্টার (যদি থাকে)
-    live_tv_channels = [ch for ch in channels if ch.get("subType") == "Live_TV"]
-    if not live_tv_channels:
-        print("⚠️ No Live_TV channels found in the list. Using all channels.")
-        live_tv_channels = channels
-    
-    print(f"📺 Processing {len(live_tv_channels)} live TV channels...")
-    
-    for idx, ch in enumerate(live_tv_channels, 1):
+
+    # ----- লাইভ টিভি প্রসেসিং -----
+    for idx, ch in enumerate(live_channels, 1):
         title = ch.get("title", "Unknown")
-        channel_id = ch.get("id")
-        if not channel_id:
-            print(f"⚠️ Skipping {title}: no id")
+        ch_id = ch.get("id")
+        if not ch_id:
             continue
-        
-        # লোগো URL বের করো
-        logo_url = ""
+
+        # লোগো URL
+        logo = ""
         images = ch.get("images", [])
         if images:
             best = max(images, key=lambda x: x.get("width", 0))
-            logo_path = best.get("path", "")
-            if logo_path:
-                if logo_path.startswith("http"):
-                    logo_url = logo_path
+            path = best.get("path", "")
+            if path:
+                if path.startswith("http"):
+                    logo = path
                 else:
-                    logo_url = f"https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/{logo_path}"
-        
-        # গ্রুপ টাইটেল (genres ব্যবহার করে)
+                    logo = f"https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/{path}"
+
+        # গ্রুপ টাইটেল
         genres = ch.get("genres", [])
-        group = get_group_from_genres(genres)
-        
-        # প্লেব্যাক ডাটা ফেচ
-        playback = get_playback_data(channel_id)
+        group = DEFAULT_GROUP
+        for g in genres:
+            for key, grp in GENRE_GROUP_MAP.items():
+                if key.lower() in g.lower():
+                    group = grp
+                    break
+
+        playback = get_playback_data(ch_id, token)
         if not playback or not playback["stream_url"]:
             print(f"⚠️ No stream for {title}")
             continue
-        
-        stream_url = playback["stream_url"]
-        cookie = playback.get("cookie")
-        
-        # m3u এন্ট্রি তৈরি
-        m3u_lines.append(f'#EXTINF:-1 group-title="{group}" tvg-logo="{logo_url}" tvg-name="{escape_m3u_field(title)}", {title}')
+
+        m3u_lines.append(f'#EXTINF:-1 group-title="{group}" tvg-logo="{logo}" tvg-name="{escape_m3u_field(title)}", {title}')
         m3u_lines.append('#EXTVLCOPT:http-user-agent=Toffee (Linux;Android 14)')
-        if cookie:
-            m3u_lines.append(f'#EXTHTTP:{{"cookie":"{cookie}"}}')
-        m3u_lines.append(stream_url)
-        m3u_lines.append("")  # ফাঁকা লাইন
-        
-        # JSON আউটপুটের জন্য সংরক্ষণ
+        if playback.get("cookie"):
+            m3u_lines.append(f'#EXTHTTP:{{"cookie":"{playback["cookie"]}"}}')
+        m3u_lines.append(playback["stream_url"])
+        m3u_lines.append("")
+
         json_output["channels"].append({
+            "type": "live_tv",
             "title": title,
-            "id": channel_id,
+            "id": ch_id,
             "group": group,
-            "logo": logo_url,
-            "stream_url": stream_url,
-            "cookie": cookie
+            "logo": logo,
+            "stream_url": playback["stream_url"],
+            "cookie": playback.get("cookie")
         })
-        
-        print(f"✅ [{idx}/{len(live_tv_channels)}] {title} → {group}")
-    
+        print(f"✅ [{idx}/{len(live_channels)}] Live TV: {title}")
+
+    # ----- রেডিও প্রসেসিং -----
+    for idx, ch in enumerate(radio_channels, 1):
+        title = ch.get("title", "Unknown")
+        stream_url = get_radio_stream_url(ch)
+        if not stream_url:
+            print(f"⚠️ No stream URL for radio {title}")
+            continue
+
+        logo = ""
+        images = ch.get("images", [])
+        if images:
+            best = max(images, key=lambda x: x.get("width", 0))
+            path = best.get("path", "")
+            if path:
+                if path.startswith("http"):
+                    logo = path
+                else:
+                    logo = f"https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/{path}"
+
+        group = "Radios"
+        m3u_lines.append(f'#EXTINF:-1 group-title="{group}" tvg-logo="{logo}" tvg-name="{escape_m3u_field(title)}", {title}')
+        m3u_lines.append('#EXTVLCOPT:http-user-agent=Toffee (Linux;Android 14)')
+        m3u_lines.append(stream_url)
+        m3u_lines.append("")
+
+        json_output["channels"].append({
+            "type": "radio",
+            "title": title,
+            "group": group,
+            "logo": logo,
+            "stream_url": stream_url
+        })
+        print(f"✅ [{idx}/{len(radio_channels)}] Radio: {title}")
+
     # ফাইল লেখা
     with open("toffee.m3u", "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
         f.write("\n".join(m3u_lines))
-    
     with open("toffee.json", "w", encoding="utf-8") as f:
         json.dump(json_output, f, indent=2, ensure_ascii=False)
-    
-    print(f"\n🎉 Done! {len(json_output['channels'])} channels written to toffee.m3u and toffee.json")
+
+    print(f"\n🎉 Success! {len(live_channels)} live TV + {len(radio_channels)} radio channels written.")
 
 if __name__ == "__main__":
     main()
