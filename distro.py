@@ -31,18 +31,20 @@ def master_to_manifest(master_url):
     # Remove query parameters
     base_url = master_url.split("?")[0]
     
-    # Extract the path after /master/ and before the last .m3u8
-    # Expected format: /v1/master/HASH/channel-name/index.m3u8
-    match = re.search(r'/master/(.+?)/([^/]+)\.m3u8$', base_url)
+    # Extract domain and the path after /master/
+    # Pattern: (domain)/v1/master/(path...)/index.m3u8
+    pattern = r'(https?://[^/]+)/v1/master/(.+?)/[^/]+\.m3u8$'
+    match = re.search(pattern, base_url)
+    
     if not match:
         return None
     
-    channel_path = match.group(1)  # This is the HASH/channel-name
+    domain = match.group(1)
+    channel_path = match.group(2)  # e.g., "0bc8e837.../bollywood-masala"
     manifest_id = str(uuid.uuid4())
     
-    # Construct the correct manifest URL
-    # Replace /master/ with /manifest/ and add /{uuid}/0.m3u8 at the end
-    manifest_url = base_url.replace("/master/", f"/manifest/{channel_path}/{manifest_id}/0.m3u8")
+    # Build clean manifest URL
+    manifest_url = f"{domain}/v1/manifest/{channel_path}/{manifest_id}/0.m3u8"
     
     return manifest_url
 
@@ -89,23 +91,23 @@ def fetch_channels():
             print(f"Failed to convert: {master_url}")
             continue
         
-        # Optional: Verify URL format (for debugging)
-        if manifest_url.count("/manifest/") != 1 or manifest_url.endswith(".m3u8"):
-            channel_info = {
-                "id": show_data.get("id", show_id),
-                "name": show_data.get("title", ""),
-                "logo": show_data.get("img_logo", ""),
-                "stream_url": manifest_url,
-                "category": show_data.get("categories", ""),
-                "genre": show_data.get("genre", ""),
-                "language": show_data.get("language", "")
-            }
-            channels.append(channel_info)
+        # Prepare channel info
+        channel_info = {
+            "id": show_data.get("id", show_id),
+            "name": show_data.get("title", ""),
+            "logo": show_data.get("img_logo", ""),
+            "stream_url": manifest_url,
+            "category": show_data.get("categories", ""),
+            "genre": show_data.get("genre", ""),
+            "language": show_data.get("language", "")
+        }
+        channels.append(channel_info)
     
     print(f"Generated {len(channels)} manifest URLs")
     return channels
 
 def generate_m3u(channels, filename="distrotv.m3u"):
+    """Generate M3U playlist file"""
     with open(filename, "w", encoding="utf-8") as f:
         f.write("#EXTM3U\n")
         f.write(f"# by @kgkaku\n")
@@ -114,27 +116,81 @@ def generate_m3u(channels, filename="distrotv.m3u"):
         
         for ch in channels:
             # Escape special characters in name
-            name = ch["name"].replace(",", "").replace("#", "")
-            f.write(f'#EXTINF:-1 tvg-id="{ch["id"]}" tvg-name="{name}" tvg-logo="{ch["logo"]}" group-title="{ch["category"]}",{name}\n')
+            name = ch["name"].replace(",", "").replace("#", "").strip()
+            if not name:  # Skip if no name
+                continue
+                
+            # Get category or use default
+            category = ch.get("category", "Uncategorized")
+            if not category:
+                category = "Uncategorized"
+            
+            f.write(f'#EXTINF:-1 tvg-id="{ch["id"]}" tvg-name="{name}" tvg-logo="{ch["logo"]}" group-title="{category}",{name}\n')
             f.write(f"{ch['stream_url']}\n")
     
-    print(f"M3U saved with {len(channels)} channels")
+    print(f"M3U saved: {filename} with {len(channels)} channels")
+
+def generate_simple_m3u(channels, filename="distrotv_simple.m3u"):
+    """Generate simple M3U playlist without metadata"""
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("#EXTM3U\n")
+        f.write(f"# by @kgkaku\n")
+        f.write(f"# time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        
+        for ch in channels:
+            name = ch["name"].replace(",", "").replace("#", "").strip()
+            if not name:
+                continue
+            f.write(f'#EXTINF:-1,{name}\n')
+            f.write(f"{ch['stream_url']}\n")
+    
+    print(f"Simple M3U saved: {filename} with {len(channels)} channels")
+
+def save_channels_json(channels, filename="distrotv.json"):
+    """Save channels data to JSON file"""
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump({
+            "time": datetime.now().isoformat(),
+            "total": len(channels),
+            "channels": channels
+        }, f, indent=2, ensure_ascii=False)
+    print(f"JSON saved: {filename}")
+
+def test_single_url():
+    """Test function to verify URL conversion"""
+    test_url = "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/horizon-sports/index.m3u8"
+    result = master_to_manifest(test_url)
+    print(f"Test URL: {test_url}")
+    print(f"Converted: {result}")
+    return result
 
 def main():
     print(f"Starting at {datetime.now()}")
+    print("=" * 50)
+    
+    # Optional: Test URL conversion
+    # test_single_url()
+    
     channels = fetch_channels()
     
     if channels:
-        generate_m3u(channels)
-        with open("distrotv.json", "w", encoding="utf-8") as f:
-            json.dump({
-                "time": datetime.now().isoformat(),
-                "total": len(channels),
-                "channels": channels
-            }, f, indent=2)
-        print("Files generated successfully!")
+        # Generate both formats
+        generate_m3u(channels, "distrotv.m3u")
+        generate_simple_m3u(channels, "distrotv_simple.m3u")
+        save_channels_json(channels)
+        
+        print("=" * 50)
+        print(f"✅ Success! Generated {len(channels)} channels")
+        print(f"📺 M3U file: distrotv.m3u")
+        print(f"📺 Simple M3U: distrotv_simple.m3u")
+        print(f"📄 JSON file: distrotv.json")
+        
+        # Show first 5 channels as sample
+        print("\n📋 Sample channels:")
+        for i, ch in enumerate(channels[:5], 1):
+            print(f"  {i}. {ch['name']} - {ch['stream_url'][:80]}...")
     else:
-        print("No channels found. Check API response.")
+        print("❌ No channels found. Check API response or network connection.")
 
 if __name__ == "__main__":
     main()
