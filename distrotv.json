@@ -1,30 +1,12 @@
 {
-  "generated": "2026-04-20T16:10:19.812286",
-  "total": 298,
+  "generated": "2026-04-20T17:58:35.679044",
+  "total": 269,
   "channels": [
-    {
-      "id": 415,
-      "name": "Horizon Sports",
-      "logo": "https://a.jsrdn.com/hls/22705/horizon-sports/logo_20231219_213910_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/horizon-sports/6401c016-ba8e-4a2c-afd3-4e541bab8868/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Action/Adventure,Lifestyle,English",
-      "language": "en"
-    },
-    {
-      "id": 416,
-      "name": "The Boat Show",
-      "logo": "https://a.jsrdn.com/hls/22706/the-boat-show/logo_20231219_223008_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/the-boat-show/fc99b5ca-9b9c-4760-af4a-392719159a38/0.m3u8",
-      "category": "IAB20",
-      "genre": "Travel,Lifestyle,Infotainment,English",
-      "language": "en"
-    },
     {
       "id": 543,
       "name": "Outside",
       "logo": "https://a.jsrdn.com/hls/22765/outside-tv/logo_20231219_220634_59.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/outsidetv/b67da25c-76c0-4a77-abb5-6d73912612f6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/outsidetv/baab1f8e-9819-4382-ac6f-a1f5814b2f01/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Action/Adventure,Lifestyle,Nature,English",
       "language": "en"
@@ -33,7 +15,7 @@
       "id": 616,
       "name": "Dove",
       "logo": "https://a.jsrdn.com/hls/22787/dove/logo_20250204_185615_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/dove/e913a03c-1054-4198-a167-0b7700137b89/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/dove/87f2fad4-0260-4e6f-ab1f-8529cd441494/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Romance,English",
       "language": "en"
@@ -42,25 +24,16 @@
       "id": 1031,
       "name": "Newsmax TV",
       "logo": "https://a.jsrdn.com/hls/22819/newsmax-tv/logo_20231219_220350_38.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/newsmax-tv/6af92f30-e64f-471d-878f-8ff4809b901c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/newsmax-tv/a4de1e91-a5e7-4430-a347-2aef1ae3c26e/0.m3u8",
       "category": "IAB12",
       "genre": "News,US News,English",
-      "language": "en"
-    },
-    {
-      "id": 1055,
-      "name": "Lone Star",
-      "logo": "https://a.jsrdn.com/hls/22759/lone-star/logo_20231219_215208_70.png",
-      "stream_url": "https://cineverse.g-mana.live/media/901011e7-9149-48cb-aabc-9218760e54fe/master.m3u8",
-      "category": "IAB1",
-      "genre": "Entertainment,Movies,Western,Classic Movies,English",
       "language": "en"
     },
     {
       "id": 1093,
       "name": "Kaloopy",
       "logo": "https://a.jsrdn.com/hls/22868/kaloopy/logo_20231219_214555_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kaloopy/1faab310-9317-45ae-8206-748a0f3daf1b/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kaloopy/d96d0dca-415e-4937-8f75-7a8e52fea52f/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Lifestyle,Sports,Music,Gaming,English",
       "language": "en"
@@ -69,7 +42,7 @@
       "id": 1094,
       "name": "Right Now Tv",
       "logo": "https://a.jsrdn.com/hls/22863/right-now-tv/logo_20231219_221555_29.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/right-now-tv/e69c0cdf-402f-4820-a3a8-1869c5994789/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/right-now-tv/c1f50514-d6e3-464a-bfcc-b7e999a04d09/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Lifestyle,Infotainment,English",
       "language": "en"
@@ -78,7 +51,7 @@
       "id": 1095,
       "name": "OAN Plus",
       "logo": "https://a.jsrdn.com/hls/22866/oan-encore/logo_20231219_220536_57.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/oan-encore/3aca6a3b-5c1e-4447-88f5-40b664c8f346/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/oan-encore/b936fd46-a1d9-4584-a233-68293c2790b5/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,English",
       "language": "en"
@@ -87,7 +60,7 @@
       "id": 1096,
       "name": "AWE Plus",
       "logo": "https://a.jsrdn.com/hls/22866/awe-encore/logo_20231219_184403_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/awe-encore/0ddb9f4a-a0ad-4f15-859f-6372ff3bcba6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/awe-encore/f550c61f-2dad-442e-9c91-177d1264894a/0.m3u8",
       "category": "IAB12",
       "genre": "Lifestyle,Entertainment,Travel,English",
       "language": "en"
@@ -96,7 +69,7 @@
       "id": 1101,
       "name": "Qello Concerts",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-qello/logo_20231219_221133_51.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/qello-qello001-montreal/distrotv/f32b37df-12f8-49ec-b8f1-977c53dc5ea0/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/qello-qello001-montreal/distrotv/94032e30-51e2-46e4-8f03-f0979be52fbc/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,English",
       "language": "en"
@@ -105,7 +78,7 @@
       "id": 1102,
       "name": "Stingray Karaoke",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-karaoke/logo_20231219_222517_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/karaoke-kar000-montreal/distrotv/f952c28e-312d-4350-b75c-84212ae3e267/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/karaoke-kar000-montreal/distrotv/9243ac66-ac01-4019-9141-94bc8c1a0109/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Contemporary Hits/Pop/Top 40,Classic Hits,English",
       "language": "en"
@@ -114,7 +87,7 @@
       "id": 1103,
       "name": "Stingray Naturescape",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-naturescape/logo_20231219_222535_48.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/naturescape-a003-montreal/distrotv/c5af58aa-4044-46a8-ad42-72353296e530/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/naturescape-a003-montreal/distrotv/28465b53-21ce-4b1e-8630-b9f4e19d2066/0.m3u8",
       "category": "IAB1",
       "genre": "Travel,Nature,Lifestyle,English",
       "language": "en"
@@ -123,7 +96,7 @@
       "id": 1104,
       "name": "Stingray Classica",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-classica/logo_20231219_222229_59.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/classica-cla008-montreal/distrotv/d8be0909-2ed3-40a5-84d2-10a43d51d42f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/classica-cla008-montreal/distrotv/1998cd0b-ea90-47c3-aebc-828968f2fdb7/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Classical Music,English",
       "language": "en"
@@ -132,7 +105,7 @@
       "id": 1105,
       "name": "Stingray DJAZZ",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-djazz/logo_20231219_222248_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/djazz-djaads-montreal/distrotv/c44c9b7c-080d-4bd9-8f56-317381210c87/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray/djazz-djaads-montreal/distrotv/f153a0af-0211-4346-9c71-127d0cb56c91/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,JAzz,English",
       "language": "en"
@@ -141,7 +114,7 @@
       "id": 1106,
       "name": "Stingray Hit List",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-hit-list/logo_20231219_222438_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-hit-list/0f3f5d4c-0692-4af6-b1d7-8f2cac5ee5da/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-hit-list/9a074aba-0ace-47d7-90d2-43193d6fb901/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Contemporary Hits/Pop/Top 40,English",
       "language": "en"
@@ -150,7 +123,7 @@
       "id": 1107,
       "name": "Stingray Hot Country",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-hot-country/logo_20231219_222458_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-hot-country/1fc7e12b-7e90-4cc3-993f-919c08e22c18/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-hot-country/2e938bab-d152-4913-b8b0-6c4f04640a21/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Country Music,English",
       "language": "en"
@@ -159,7 +132,7 @@
       "id": 1108,
       "name": "Stingray Rock Alternative",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-rock-alternative/logo_20231219_222631_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-rock-alternative/c4a8c9c2-bed4-4be9-883e-bf7a6a5e99df/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-rock-alternative/3117625d-6d4c-4217-b29f-e71609a263fd/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Alternative Rock,English",
       "language": "en"
@@ -168,7 +141,7 @@
       "id": 1109,
       "name": "Stingray Pop Adult",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-pop-adult/logo_20231219_222554_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-pop-adult/b1d9edca-53c9-402c-a6ce-6bbee1cf1b7f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-pop-adult/2e59f0df-95de-4282-9ecc-017cadeabe4c/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Contemporary Hits/Pop/Top 40,English",
       "language": "en"
@@ -177,7 +150,7 @@
       "id": 1110,
       "name": "Stingray Classic Rock",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-classic-rock/logo_20231219_222210_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-classic-rock/529399d8-ff7e-4fda-82fd-05bdf5fc96cf/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-classic-rock/87463ede-a31e-4ff0-b6d4-8f29df4d0455/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Classic Rock,English",
       "language": "en"
@@ -186,7 +159,7 @@
       "id": 1111,
       "name": "Stingray Remember the 80s",
       "logo": "https://a.jsrdn.com/hls/22865/stringray-remember-the-80s/logo_20231219_222612_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-remember-the-80s/67a16d06-5a8d-4df5-8f13-2fd7353675fc/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-remember-the-80s/8c46bc2b-8f20-4e88-b1eb-8ff5c0b304c0/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Oldies/Adult Standards,English",
       "language": "en"
@@ -195,7 +168,7 @@
       "id": 1112,
       "name": "Stingray Éxitos del Momento",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-todays-latin-pop/logo_20231219_222310_55.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-xitos-del-momento/7ff76c2d-92b0-48f9-a03b-c2d7d786dc2a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-xitos-del-momento/8b8e8ca6-0806-474d-ac1b-a34eacb4a322/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Reggae,Spanish",
       "language": "es"
@@ -204,7 +177,7 @@
       "id": 1113,
       "name": "Stingray Greatest Hits",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-greatest-hits/logo_20231219_222354_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-greatest-hits/b1e74780-1b72-4d3a-93fd-0143432d9bb6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-greatest-hits/38169fa1-6407-411f-8b44-5efdad78d9c7/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Contemporary Hits/Pop/Top 40,English",
       "language": "en"
@@ -213,7 +186,7 @@
       "id": 1114,
       "name": "Stingray HipHop and RnB",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-hiphop-and-rnb/logo_20231219_222417_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-hiphop-and-rnb/3aca530e-4832-4efa-9b98-d677a4bb6ec3/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-hiphop-and-rnb/f1f5c29d-358b-49fd-8a94-d2979ad017b3/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Hip Hop Music,R&B/Soul/Funk,English",
       "language": "en"
@@ -222,7 +195,7 @@
       "id": 1115,
       "name": "Stingray Flashback 70s",
       "logo": "https://a.jsrdn.com/hls/22865/stingray-flashback-70s/logo_20231219_222333_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-flashback-70s/78d8bb71-022e-42cc-b6bc-fc494ec20a7c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/stingray-flashback-70s/5d6d1962-acc6-470b-943a-c4bc51567b2d/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Oldies/Adult Standards,English",
       "language": "en"
@@ -231,7 +204,7 @@
       "id": 1116,
       "name": "Schwab Network",
       "logo": "https://a.jsrdn.com/hls/22849/schwab-network/logo_20231219_221750_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tdameritrade/4e0dd8b2-cfe3-4e69-8270-d288a4c6e5e5/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tdameritrade/f1667107-1996-4485-99a0-7116719b1fdc/0.m3u8",
       "category": "IAB13",
       "genre": "Finance,Business,Factual,Talk Show,News,English",
       "language": "en"
@@ -240,7 +213,7 @@
       "id": 1127,
       "name": "CJC Television Network",
       "logo": "https://a.jsrdn.com/hls/22886/cjc-television-network/logo_20231219_192447_56.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cjc-television-network/a6c73350-3813-4fca-912c-bdf39058131e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cjc-television-network/0007a626-f404-420c-bf21-ee387bd1de6a/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Lifestyle,African",
       "language": "en"
@@ -249,7 +222,7 @@
       "id": 1130,
       "name": "World Poker Tour",
       "logo": "https://a.jsrdn.com/hls/22893/world-poker-tour/logo_20231219_224338_70.png",
-      "stream_url": "https://d3w4n3hhseniak.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/WPT-DistroTV/d6098419-eeac-4246-9af3-3af089427c58/0.m3u8",
+      "stream_url": "https://d3w4n3hhseniak.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/WPT-DistroTV/bc198be8-1779-410f-8671-d89e5e6e46d2/0.m3u8",
       "category": "IAB9",
       "genre": "Sports,Reality TV,English",
       "language": "en"
@@ -258,7 +231,7 @@
       "id": 1187,
       "name": "Law & Crime",
       "logo": "https://a.jsrdn.com/hls/22884/law-crime/logo_20240131_212533_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/law-crime/d72099a8-48d4-4ea2-bea0-d8a45fa064c7/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/law-crime/ede21242-ea1d-406c-890f-8251edebe065/0.m3u8",
       "category": "IAB12",
       "genre": "Entertainment,Reality TV,True Crime,English",
       "language": "en"
@@ -267,7 +240,7 @@
       "id": 1195,
       "name": "24 Hour Free Movies",
       "logo": "https://a.jsrdn.com/hls/22907/24-hour-free-movies/logo_20231219_183702_63.png",
-      "stream_url": "https://d1b5mlajbmvkjv.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/UDU-DistroTV/9d1f95a8-a56a-45fd-ac4d-6d2ae3dba80d/0.m3u8",
+      "stream_url": "https://d1b5mlajbmvkjv.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/UDU-DistroTV/c71e0b83-ffe7-4c15-9dd2-3e49b9170266/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Action/Adventure,English",
       "language": "en"
@@ -285,7 +258,7 @@
       "id": 1208,
       "name": "Channel Fight",
       "logo": "https://a.jsrdn.com/hls/23007/channel-fight/logo_20231219_190128_68.png",
-      "stream_url": "https://d15wqvt0xm15k4.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-DistroTV/d5a89167-d651-4af1-9f89-ff81341659eb/0.m3u8",
+      "stream_url": "https://d15wqvt0xm15k4.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/ChannelFight-DistroTV/61bf897f-15c5-4932-a85b-48f6c16fc513/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Lifestyle,Infotainment,English",
       "language": "en"
@@ -375,7 +348,7 @@
       "id": 1240,
       "name": "Revry",
       "logo": "https://a.jsrdn.com/hls/22919/revry/logo_20231219_221503_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/revry/531a8cf3-4585-448a-b2f1-24536f648dc3/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/revry/7cc1bc06-daeb-4957-86e2-be651fe9873a/0.m3u8",
       "category": "IAB14",
       "genre": "Lifestyle,Entertainment,Drama,English",
       "language": "en"
@@ -384,7 +357,7 @@
       "id": 1242,
       "name": "Revry Her",
       "logo": "https://a.jsrdn.com/hls/22919/revry-her/logo_20231219_221435_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/revry-her/e7f8d83a-bace-4915-80c4-c77b6a4c7c3e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/revry-her/4ab25322-0a2c-4efe-a814-3884e96ec54b/0.m3u8",
       "category": "IAB14",
       "genre": "Lifestyle,Entertainment,Drama,English",
       "language": "en"
@@ -393,7 +366,7 @@
       "id": 1244,
       "name": "Euronews",
       "logo": "https://a.jsrdn.com/hls/22886/euronews/logo_20231218_175557_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/euronews/0f4d71c3-f7e4-4b5f-9d1f-46a0effe030a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/euronews/a7ada6dc-fa1e-46a6-bb1e-012d1ea9f05b/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,English",
       "language": "en"
@@ -402,7 +375,7 @@
       "id": 1245,
       "name": "Euronews Español",
       "logo": "https://a.jsrdn.com/hls/22886/euronews-spa/logo_20231218_175505_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/euronews-spa/6fe591f4-85f0-4ef4-b6cf-4ab4ee8e549c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/euronews-spa/5783285b-3ceb-4f7b-93ca-1fd32bfc2e27/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,Spanish",
       "language": "es"
@@ -411,7 +384,7 @@
       "id": 1257,
       "name": "Bloomberg Television",
       "logo": "https://a.jsrdn.com/hls/22938/bloomberg-television/logo_20231219_184756_59.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-television/3b4ef237-7e43-42fc-8ed2-13657168a097/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-television/8c000fab-93e1-4fdc-9272-4a5732c926a3/0.m3u8",
       "category": "IAB13",
       "genre": "Finance,Business,Factual,Talk Show,News,English",
       "language": "en"
@@ -420,7 +393,7 @@
       "id": 1259,
       "name": "CineLife",
       "logo": "https://a.jsrdn.com/hls/22933/cinelife/logo_20231219_192316_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cinelife/87a5b2ce-55a9-43cd-958c-02a8737590e0/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cinelife/4b87c8fd-fc3e-42fa-ab6f-4c2a8d307b51/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Action/Adventure,Fantasy,English",
       "language": "en"
@@ -429,7 +402,7 @@
       "id": 1641,
       "name": "Bloomberg Originals",
       "logo": "https://a.jsrdn.com/hls/22938/bloomberg-originals/logo_20231219_184737_67.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-quicktake/1c98b786-eddb-4654-8471-7377866bce21/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bloomberg-quicktake/e4aac1af-5b90-46ba-9fd3-db54e341c887/0.m3u8",
       "category": "IAB5",
       "genre": "Entertainment,Documentary,Infotainment,Business,English",
       "language": "en"
@@ -447,7 +420,7 @@
       "id": 1686,
       "name": "NOST - The Nostalgia Network",
       "logo": "https://a.jsrdn.com/hls/22956/nost-the-nostalgia-network/logo_20231219_220428_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/nost-the-nostalgia-network/b017050a-b2a7-4af3-8017-d0566590a94f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/nost-the-nostalgia-network/ff7692c8-1278-41a2-a58c-6da49d1d8001/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Classic Movies,English",
       "language": "en"
@@ -456,7 +429,7 @@
       "id": 1687,
       "name": "ShopLC",
       "logo": "https://a.jsrdn.com/hls/22957/shoplc/logo_20231219_221828_30.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/shoplc/ffb74657-7494-4395-81ab-384f102bcfd9/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/shoplc/c92a4788-2ce5-4290-8a4c-4b53c801d3f2/0.m3u8",
       "category": "IAB22",
       "genre": "Lifestyle,Shopping,English",
       "language": "en"
@@ -465,70 +438,25 @@
       "id": 1709,
       "name": "Journy",
       "logo": "https://a.jsrdn.com/hls/22944/journy/logo_20231219_214422_44.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/journy/94c1aab0-de72-4e5a-8ba9-a97d6752a993/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/journy/83bd163d-093c-4673-96da-1baf00ce21e7/0.m3u8",
       "category": "IAB20",
       "genre": "Travel,Lifestyle,Food,English",
-      "language": "en"
-    },
-    {
-      "id": 1714,
-      "name": "MotorRacing",
-      "logo": "https://a.jsrdn.com/hls/22705/motorracing/logo_20231219_215946_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/motorracing/d147a2e6-d0a9-4f35-8f62-9b2a6effd286/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Auto Racing,English",
       "language": "en"
     },
     {
       "id": 1741,
       "name": "WION World is One News",
       "logo": "https://a.jsrdn.com/hls/22975/wion-world-is-one-news/logo_20231219_224158_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/wion-world-is-one-news/32cba90c-3c96-4a91-9e9f-a8dca2b1ad84/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/wion-world-is-one-news/0e655694-a64f-4cd6-bf21-d45074d72117/0.m3u8",
       "category": "IAB12",
       "genre": "News,Politics,Current Affairs,Asian",
       "language": "en"
-    },
-    {
-      "id": 1760,
-      "name": "Billiard TV",
-      "logo": "https://a.jsrdn.com/hls/22964/billiard-tv/logo_20231219_184548_37.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/billiard-tv/c9600578-737b-4387-9bba-3873f923ca5c/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Entertainment,English",
-      "language": "en"
-    },
-    {
-      "id": 1761,
-      "name": "BarkTV",
-      "logo": "https://a.jsrdn.com/hls/22964/barktv/logo_20240220_175434_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/barktv/987e6c1b-fa6c-4b4b-b7a9-a64688449761/0.m3u8",
-      "category": "IAB1",
-      "genre": "Entertainment,Lifestyle,Reality TV,English",
-      "language": "en"
-    },
-    {
-      "id": 1791,
-      "name": "Mirror Now",
-      "logo": "https://a.jsrdn.com/hls/22979/mirror-now/logo_20231219_215545_66.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mirror-now/288343c8-a0ca-40f7-9c58-a24b7ac0b14f/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Politics,Current Affairs,Asian",
-      "language": "en"
-    },
-    {
-      "id": 1807,
-      "name": "Times Now Navbharat",
-      "logo": "https://a.jsrdn.com/hls/22979/times-now-navbharat/logo_20231219_223143_59.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/times-now-navbharat/39cea3c8-c2e4-408f-b8da-beb4eff1ad6c/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Politics,Current Affairs,Asian",
-      "language": "hi"
     },
     {
       "id": 2199,
       "name": "ACE TV",
       "logo": "https://a.jsrdn.com/hls/22990/ace-tv/logo_20231219_183914_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ace-tv/836e1901-3515-4a6d-853e-0a9886047102/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ace-tv/35d473f0-e945-4303-b760-2f5a25838c58/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Classic Movies,Drama,Sports,English",
       "language": "en"
@@ -537,25 +465,16 @@
       "id": 2212,
       "name": "Real America's Voice",
       "logo": "https://a.jsrdn.com/hls/22995/real-americas-voice/logo_20231219_221226_64.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/real-americas-voice/524098b9-996b-449d-af79-40fd7898dd5a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/real-americas-voice/92c555fc-e996-41d2-add2-775fb25b5473/0.m3u8",
       "category": "IAB12",
       "genre": "News,US News,English",
-      "language": "en"
-    },
-    {
-      "id": 2507,
-      "name": "Powersports World",
-      "logo": "https://a.jsrdn.com/hls/22964/powersports-world/logo_20240917_170643_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/powersports-world/267a44b0-93e9-4842-91c2-e7e8b153eece/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Auto Racing,English",
       "language": "en"
     },
     {
       "id": 2531,
       "name": "Garv Punjab Gurbani",
       "logo": "https://a.jsrdn.com/hls/22994/garv-punjab-gurbani/logo_20231219_202149_65.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/garv-punjab-gurbani/ea047543-fb3f-4b36-9604-d3aff1b8d959/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/garv-punjab-gurbani/fd9f7dc5-f8c8-45ec-a045-d7b9e2311f99/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "pa"
@@ -564,7 +483,7 @@
       "id": 2532,
       "name": "Swar Shree",
       "logo": "https://a.jsrdn.com/hls/22994/swar-shree/logo_20231219_222755_45.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/swar-shree/dc18df11-d6b8-46f2-a919-bb6e27fd370b/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/swar-shree/85ed3532-963d-4d86-8611-0cf4b8cb084b/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "gu"
@@ -573,7 +492,7 @@
       "id": 2540,
       "name": "True History",
       "logo": "https://a.jsrdn.com/hls/23001/true-history/logo_20231219_223655_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/true-history/2c9e3744-28ac-4173-8bda-795c3b89bb0a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/true-history/2497460c-d522-4a14-9d1e-7528b5f4f20f/0.m3u8",
       "category": "IAB5",
       "genre": "Education,Infotainment,Documentary,History,English",
       "language": "en"
@@ -588,19 +507,10 @@
       "language": "en"
     },
     {
-      "id": 2674,
-      "name": "ACL Cornhole TV",
-      "logo": "https://a.jsrdn.com/hls/22964/acl-cornhole-tv/logo_20231219_183932_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/acl-cornhole-tv/422ecdbf-d922-484c-b395-02b23379f258/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Strongman,English",
-      "language": "en"
-    },
-    {
       "id": 2787,
       "name": "Hare Krsna",
       "logo": "https://a.jsrdn.com/hls/22994/hare-krsna/logo_20231219_202633_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hare-krsna/f6b86b12-db8b-4da2-8a6e-f063d15daec7/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hare-krsna/503a1b86-ccb9-4b7c-994f-1209ca44300e/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "hi"
@@ -609,64 +519,10 @@
       "id": 2842,
       "name": "Swerve Combat",
       "logo": "https://a.jsrdn.com/hls/23018/swerve-combat/logo_20231219_222813_26.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/swerve-combat/8cef5151-5e24-4109-afcb-c2290065b664/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/swerve-combat/9c73cfd9-2383-45f5-b8f1-8fc154ee7e27/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Martial Arts,English",
       "language": "en"
-    },
-    {
-      "id": 2889,
-      "name": "ABP News",
-      "logo": "https://a.jsrdn.com/hls/23011/abp-news/logo_20250512_175525_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abp-news/567ee43a-8def-48a7-b361-60bf7294cdda/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Politics,Current Affairs,Asian",
-      "language": "hi"
-    },
-    {
-      "id": 2890,
-      "name": "ABP Asmita",
-      "logo": "https://a.jsrdn.com/hls/23011/abp-asmita/logo_20250512_175437_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abp-asmita/bc035869-1005-4e78-b419-6014e5027288/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "gu"
-    },
-    {
-      "id": 2891,
-      "name": "ABP Majha",
-      "logo": "https://a.jsrdn.com/hls/23011/abp-majha/logo_20250512_175510_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abp-majha/0fef1f68-bb77-4d64-8392-3b4b3de385bf/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "mr"
-    },
-    {
-      "id": 2892,
-      "name": "ABP Ananda",
-      "logo": "https://a.jsrdn.com/hls/23011/abp-ananda/logo_20250512_175422_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abp-ananda/a8b69d99-72a0-4d28-8318-a7279a504c72/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "bn"
-    },
-    {
-      "id": 2893,
-      "name": "ABP Ganga",
-      "logo": "https://a.jsrdn.com/hls/23011/abp-ganga/logo_20250512_175453_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abp-ganga/41908002-5c2b-4ebe-9079-bd6d06c05c70/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "hi"
-    },
-    {
-      "id": 2894,
-      "name": "ABP Sanjha",
-      "logo": "https://a.jsrdn.com/hls/23011/abp-sanjha/logo_20250512_175546_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abp-sanjha/cde7abab-1487-4b89-8856-036ffe7ae598/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "pa"
     },
     {
       "id": 2964,
@@ -699,7 +555,7 @@
       "id": 3109,
       "name": "FITE 24/7",
       "logo": "https://a.jsrdn.com/hls/23007/fite-247/logo_20231219_225031_42.png",
-      "stream_url": "https://d3d85c7qkywguj.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/FiteTV-DistroTV/a16464bb-1dbc-47e6-a614-b35a03b2d9a3/0.m3u8",
+      "stream_url": "https://d3d85c7qkywguj.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/FiteTV-DistroTV/9d643cd8-95a8-44a1-b78a-89c20cebbb82/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Martial Arts,English",
       "language": "en"
@@ -726,7 +582,7 @@
       "id": 3120,
       "name": "Africanews",
       "logo": "https://a.jsrdn.com/hls/22886/africanews/logo_20231218_175639_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/africanews/963013a1-25aa-4442-b36c-efc53d7f6ef3/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/africanews/06aeebf8-e6af-45f6-8ace-40016b9ef9f1/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,African",
       "language": "en"
@@ -735,7 +591,7 @@
       "id": 3125,
       "name": "beIN SPORTS Xtra",
       "logo": "https://a.jsrdn.com/hls/23038/bein-sports-xtra/logo_20231219_184505_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bein-sports-xtra/e538820a-74fb-414c-9f74-a8ec78e6dc98/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bein-sports-xtra/2e4b876d-6d39-4e19-8aa2-4efed70c7c58/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Sports Radio,English",
       "language": "en"
@@ -744,7 +600,7 @@
       "id": 3126,
       "name": "beIN SPORTS Xtra en Español",
       "logo": "https://a.jsrdn.com/hls/23038/bein-sports-xtra-en-espanol/logo_20231219_184521_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bein-sports-xtra-en-espanol/a6b712a8-e583-45dd-9e9b-8799ac557cb8/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bein-sports-xtra-en-espanol/0e9b1199-4001-4932-b8bb-1d0a30214949/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Sports Radio,Spanish",
       "language": "es"
@@ -753,7 +609,7 @@
       "id": 3132,
       "name": "Pitaara TV",
       "logo": "https://a.jsrdn.com/hls/23049/pitaara-tv/logo_20231219_220959_63.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/pitaara-tv/b1ff9dae-4a45-44fd-a09d-b7346a13e10a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/pitaara-tv/593e28a7-a292-428c-abdd-0b7ef25da98e/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Asian",
       "language": "pa"
@@ -771,7 +627,7 @@
       "id": 3162,
       "name": "FUEL TV",
       "logo": "https://a.jsrdn.com/hls/23055/fuel-tv/logo_20231219_202037_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/fuel-tv/9b36446f-232c-4336-80cb-4b70f31b3e32/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/fuel-tv/339b4fdb-8aa9-499b-830c-64f7c561fd4f/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Action/Adventure,English",
       "language": "en"
@@ -789,7 +645,7 @@
       "id": 3187,
       "name": "Gusto TV",
       "logo": "https://a.jsrdn.com/hls/23062/gusto-tv/logo_20231219_202519_56.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gusto-tv/8d76aed1-9700-43f1-b478-411853c6b201/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gusto-tv/7f1ee50a-3172-4833-b408-62c09db23c2b/0.m3u8",
       "category": "IAB8",
       "genre": "Lifestyle,Food,Travel,English",
       "language": "en"
@@ -798,7 +654,7 @@
       "id": 3193,
       "name": "4K TRAVEL TV",
       "logo": "https://a.jsrdn.com/hls/23064/4k-travel-tv/logo_20231219_183416_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/4k-travel-tv/c6a80efc-3be4-4106-90ee-91b994c36c15/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/4k-travel-tv/43ffb39e-7c58-494e-b699-8882e2ff9199/0.m3u8",
       "category": "IAB20",
       "genre": "Travel,Lifestyle,English",
       "language": "en"
@@ -807,7 +663,7 @@
       "id": 3196,
       "name": "ENCORE+",
       "logo": "https://a.jsrdn.com/hls/23064/encore/logo_20231219_201123_50.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/encore/20086dfc-b8db-4139-91be-1fff5633de39/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/encore/dd630ba9-3df5-4f73-9ccf-468caba7c0b4/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,English",
       "language": "en"
@@ -816,7 +672,7 @@
       "id": 3197,
       "name": "KOZOOM TV",
       "logo": "https://a.jsrdn.com/hls/23064/kozoom-tv/logo_20231219_214836_63.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kozoom-tv/b4cabec6-3a34-4911-aa0e-dfe289aa460f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kozoom-tv/aa7295cc-8feb-4889-9064-1bdf79394255/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Entertainment,English",
       "language": "en"
@@ -852,7 +708,7 @@
       "id": 3239,
       "name": "Balle Balle",
       "logo": "https://a.jsrdn.com/hls/23060/balle-balle/logo_20231219_184445_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/balle-balle/6c1ddf03-c810-4e08-81da-4b5465328e68/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/balle-balle/5f2e6ae9-792a-43e3-afa6-a2a33df156a3/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Asian",
       "language": "pa"
@@ -861,7 +717,7 @@
       "id": 3242,
       "name": "TRACE Latina",
       "logo": "https://a.jsrdn.com/hls/23073/trace-latina/logo_20231219_223517_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-latina/f7088180-46a7-4afc-b98c-8e17bb00c88b/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-latina/92e26b42-5ce4-4b37-9f07-724a039b3476/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Contemporary Hits/Pop/Top 40,Reggae,Hip Hop Music,Spanish",
       "language": "es"
@@ -870,7 +726,7 @@
       "id": 3243,
       "name": "TRACE Urban",
       "logo": "https://a.jsrdn.com/hls/23073/trace-urban/logo_20231219_223537_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-urban/e2507a1e-d2f9-47d0-8d6b-dc643d02f190/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-urban/22c8861a-16c2-4423-a4a0-d99404126079/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Contemporary Hits/Pop/Top 40,Hip Hop Music,English",
       "language": "en"
@@ -879,7 +735,7 @@
       "id": 3259,
       "name": "Bollywood Classic",
       "logo": "https://a.jsrdn.com/hls/23077/bollywood-classic/logo_20231219_184825_52.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-classic/4017cd01-9bf8-4d8d-a3fc-7ad3151faa7a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-classic/a39e12fd-4255-4606-a4a6-ebd202fc63ed/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Classic Movies,Bollywood,Asian",
       "language": "hi"
@@ -888,7 +744,7 @@
       "id": 3260,
       "name": "Bollywood HD",
       "logo": "https://a.jsrdn.com/hls/23077/bollywood-hd/logo_20231219_184845_51.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-hd/11bfb141-fcf5-486e-b0ed-dcf6e9a2cf30/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-hd/8e7bccca-916e-46e0-863a-a50eddca26b2/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Bollywood,Asian",
       "language": "hi"
@@ -906,7 +762,7 @@
       "id": 3307,
       "name": "TRACE Brazuca",
       "logo": "https://a.jsrdn.com/hls/23073/trace-brazuca/logo_20231219_223457_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-brazuca/32a81168-df52-402c-8c98-2e081b83ba74/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-brazuca/947267a6-22d0-4918-b670-6215037a86f6/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Contemporary Hits/Pop/Top 40,Hip Hop Music,Spanish",
       "language": "pt"
@@ -915,7 +771,7 @@
       "id": 3369,
       "name": "Motorvision TV",
       "logo": "https://a.jsrdn.com/hls/22886/motorvision-tv/logo_20231219_220026_63.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/motorvision-tv/8a79b127-0d7a-4ed8-b165-b34fc3c458b1/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/motorvision-tv/a0f7986b-2502-44df-8bfb-c7a3f2808a9a/0.m3u8",
       "category": "IAB2",
       "genre": "Lifestyle,Infotainment,English",
       "language": "en"
@@ -924,7 +780,7 @@
       "id": 3370,
       "name": "Motorvision TV Español",
       "logo": "https://a.jsrdn.com/hls/22886/motorvision-tv-espanol/logo_20231219_220007_67.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/motorvision-tv-espanol/6e34a085-0b03-462a-b73d-8d304d91eadc/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/motorvision-tv-espanol/acbf2fc8-6c7e-4dc1-95ec-7f8566143b29/0.m3u8",
       "category": "IAB2",
       "genre": "Lifestyle,Infotainment,Spanish",
       "language": "es"
@@ -969,7 +825,7 @@
       "id": 3426,
       "name": "DeFiance Media",
       "logo": "https://a.jsrdn.com/hls/23095/defiance-media/logo_20231219_193005_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/defiance-media/2b0d04b9-c93f-4faf-b247-0e1d685f70ed/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/defiance-media/c5d3609c-5b8d-43cd-9ea4-f8aed35eba92/0.m3u8",
       "category": "IAB3",
       "genre": "Finance,Business,Factual,Talk Show,English",
       "language": "en"
@@ -996,100 +852,19 @@
       "id": 3570,
       "name": "CraftsyTV",
       "logo": "https://a.jsrdn.com/hls/23108/craftsytv/logo_20231219_192821_64.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/craftsytv/4f1ea1d2-ade5-410a-8273-a20cc37052a0/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/craftsytv/42624e1b-c7fc-4981-8d34-cda8ebbc90b2/0.m3u8",
       "category": "IAB9",
       "genre": "Lifestyle,Infotainment,English",
-      "language": "en"
-    },
-    {
-      "id": 3612,
-      "name": "9XM",
-      "logo": "https://a.jsrdn.com/hls/23111/9xm/logo_20240607_163326_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/9xm/27251adf-790f-4720-a9e1-0ff82b1350ff/0.m3u8",
-      "category": "IAB1",
-      "genre": "Music,Bollywood,Music Video,Asian",
-      "language": "hi"
-    },
-    {
-      "id": 3613,
-      "name": "9X Jalwa",
-      "logo": "https://a.jsrdn.com/hls/23111/9x-jalwa/logo_20231219_183550_55.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/9x-jalwa/0dff3da2-61bf-4525-a9a0-c3a2640bf3d3/0.m3u8",
-      "category": "IAB1",
-      "genre": "Music,Bollywood,Music Video,Asian",
-      "language": "hi"
-    },
-    {
-      "id": 3633,
-      "name": "BritAsiaTV",
-      "logo": "https://a.jsrdn.com/hls/22693/britasiatv/logo_20231219_185045_64.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/britasiatv/125ae949-6799-4c7b-ab8c-9cc248e43e60/0.m3u8",
-      "category": "IAB1",
-      "genre": "Entertainment,Music Video,Asian",
       "language": "en"
     },
     {
       "id": 3643,
       "name": "Jewish Life Television JLTV",
       "logo": "https://a.jsrdn.com/hls/23114/jewish-life-television-jltv/logo_20231219_214334_56.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/jewish-life-television-jltv/f8525a2c-a52c-4a73-90b4-f73be8f0f58a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/jewish-life-television-jltv/4f5aae11-0431-4b7a-8364-fbd46386c632/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,English",
       "language": "en"
-    },
-    {
-      "id": 4104,
-      "name": "News9Live",
-      "logo": "https://a.jsrdn.com/hls/23129/news9live/logo_20250813_011629_68.jpg",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news9live/f99a97e7-3d4c-45ca-93e4-85a52f83b8d6/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Politics,Current Affairs,Asian",
-      "language": "en"
-    },
-    {
-      "id": 4105,
-      "name": "TV9 Bangla",
-      "logo": "https://a.jsrdn.com/hls/23129/tv9-bangla/logo_20231219_225218_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tv9-bangla/ee6eead6-23a1-45ef-b971-8dc5369ddc68/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "bn"
-    },
-    {
-      "id": 4106,
-      "name": "TV9 Bharatvarsh",
-      "logo": "https://a.jsrdn.com/hls/23129/tv9-bharatvarsh/logo_20250813_011816_68.jpg",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tv9-bharatvarsh/ccba7baf-c043-4197-8cf5-fd09bf744d7f/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Politics,Current Affairs,Asian",
-      "language": "hi"
-    },
-    {
-      "id": 4107,
-      "name": "TV9 Gujarati",
-      "logo": "https://a.jsrdn.com/hls/23129/tv9-gujarati/logo_20231219_225259_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tv9-gujarati/b720a182-83a9-4162-b0cf-628916292913/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "gu"
-    },
-    {
-      "id": 4108,
-      "name": "TV9 Kannada",
-      "logo": "https://a.jsrdn.com/hls/23129/tv9-kannada/logo_20231219_225317_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tv9-kannada/a231268e-b03d-4f3c-bd90-773282e98ad6/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "kn"
-    },
-    {
-      "id": 4109,
-      "name": "TV9 Marathi",
-      "logo": "https://a.jsrdn.com/hls/23129/tv9-marathi/logo_20231219_225337_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tv9-marathi/890ad815-6ea6-489c-af74-14d018983c9a/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "mr"
     },
     {
       "id": 4500,
@@ -1101,19 +876,10 @@
       "language": "en"
     },
     {
-      "id": 4503,
-      "name": "TV9 Telugu USA",
-      "logo": "https://a.jsrdn.com/hls/23129/tv9-telugu-usa/logo_20231219_225420_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tv9-telugu-usa/f73cd4e4-ad2b-4bdd-9fce-39057dd9f8c9/0.m3u8",
-      "category": "IAB12",
-      "genre": "News,Regional News,Asian",
-      "language": "te"
-    },
-    {
       "id": 4554,
       "name": "crema.tv",
       "logo": "https://a.jsrdn.com/hls/22886/crematv/logo_20231219_192845_64.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/crematv/682e9393-ff5b-4323-8b1a-53a7c94c2bcf/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/crematv/6b8fdb3c-9de3-45b5-9dcf-c3accf7ef205/0.m3u8",
       "category": "IAB8",
       "genre": "Entertainment,Lifestyle,Infotainment,Documentary,English",
       "language": "en"
@@ -1131,7 +897,7 @@
       "id": 4581,
       "name": "FEVA TV",
       "logo": "https://a.jsrdn.com/hls/23132/feva-tv/logo_20231219_201430_69.png",
-      "stream_url": "https://d21x3vavxu7p2x.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-FEVATV/8ae03bec-0e80-43e7-ba76-2692c739a811/0.m3u8",
+      "stream_url": "https://d21x3vavxu7p2x.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-FEVATV/039de195-2063-4a61-a177-51d350e6de6a/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Lifestyle,African",
       "language": "en"
@@ -1140,7 +906,7 @@
       "id": 4595,
       "name": "FEVA MUSIC",
       "logo": "https://a.jsrdn.com/hls/23132/feva-music/logo_20231219_201409_70.png",
-      "stream_url": "https://dmecgxuzr2ywk.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-FEVAMusic/d9bf753c-3897-4979-8dcd-97d1fa069a93/0.m3u8",
+      "stream_url": "https://dmecgxuzr2ywk.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-FEVAMusic/f97f5863-341b-48d5-bb90-84c8cc71b97b/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Hip Hop Music,Reggae,African",
       "language": "en"
@@ -1149,7 +915,7 @@
       "id": 4602,
       "name": "Lakshya TV",
       "logo": "https://a.jsrdn.com/hls/22994/lakshya-tv/logo_20231219_215028_60.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/lakshya-tv/58cb80c6-b77c-4bbd-87dd-dae964d719cc/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/lakshya-tv/ab741fa4-5955-45e5-93e5-5115aabd8921/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "gu"
@@ -1158,7 +924,7 @@
       "id": 4603,
       "name": "Kartavya TV",
       "logo": "https://a.jsrdn.com/hls/22994/kartavya-tv/logo_20231219_214633_61.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kartavya-tv/41a583a5-bfc7-448a-a55b-fe37d4aa30e6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kartavya-tv/693a5952-fcb1-48cc-94de-25ecc0717c19/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "gu"
@@ -1167,7 +933,7 @@
       "id": 4604,
       "name": "Kalyan TV",
       "logo": "https://a.jsrdn.com/hls/22994/kalyan-tv/logo_20231219_214614_65.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kalyan-tv/26454005-df6e-46a8-89b9-45d8a6e78ff2/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kalyan-tv/d0ce89cf-0c7a-4bf2-9bc7-c123950dcbf6/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "gu"
@@ -1176,7 +942,7 @@
       "id": 4914,
       "name": "Romance Channel",
       "logo": "https://a.jsrdn.com/hls/23077/romance-channel/logo_20231219_221635_53.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/romance-channel/057d86fc-edb9-4592-9f7a-87e0da3450ac/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/romance-channel/1e2b4ca5-bb25-4256-a5d9-85267fbec419/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Spanish",
       "language": "es"
@@ -1185,7 +951,7 @@
       "id": 4918,
       "name": "NTD News",
       "logo": "https://a.jsrdn.com/hls/23136/ntd-news/logo_20240104_172901_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ntd-news/551c1e38-60de-4fb8-bf19-3cc5c4038a6e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ntd-news/54dff878-7c94-4805-85ba-34dadfda165d/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,English",
       "language": "en"
@@ -1194,7 +960,7 @@
       "id": 4957,
       "name": "Mediacorp Entertainment – Chinese",
       "logo": "https://a.jsrdn.com/hls/23077/mediacorp-entertainment-chinese/logo_20240102_185716_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-chinese/4767d027-8806-473a-a2b7-b25bc1948a08/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-chinese/76d5271b-e492-4543-903e-02b48329dc40/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Action/Adventure,Lifestyle,Asian",
       "language": "zh"
@@ -1203,7 +969,7 @@
       "id": 4958,
       "name": "Mediacorp Entertainment – English",
       "logo": "https://a.jsrdn.com/hls/23077/mediacorp-entertainment-english/logo_20240102_190017_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-english/ea846eea-f1f7-41f3-8710-e520bf28613d/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-english/118a7536-7090-4ebe-95b3-9899271be7b1/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Action/Adventure,Lifestyle,Asian",
       "language": "en"
@@ -1212,7 +978,7 @@
       "id": 4959,
       "name": "Mediacorp Entertainment – Tamil",
       "logo": "https://a.jsrdn.com/hls/23077/mediacorp-entertainment-tamil/logo_20240102_190222_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-tamil/0e517fa6-a75b-412b-a14f-3951a97db405/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mediacorp-entertainment-tamil/8b63216a-894b-4bb8-954b-e347bebc176d/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Drama,Action/Adventure,Lifestyle,Asian",
       "language": "ta"
@@ -1221,7 +987,7 @@
       "id": 5006,
       "name": "Bollywood Masala",
       "logo": "https://a.jsrdn.com/hls/23142/bollywood-masala/logo_20240213_192946_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-masala/48dafb4a-d0cc-4fea-b37a-84244c071b4d/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-masala/9cc8cbc3-9a74-47ab-9b45-f892d77b47b0/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Bollywood,Asian",
       "language": "hi"
@@ -1230,7 +996,7 @@
       "id": 5049,
       "name": "YRF Music",
       "logo": "https://a.jsrdn.com/hls/23146/yrf-music/logo_20240322_175611_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/yrf-music/9e42cf90-2daa-4896-9fc3-68b2e7a98153/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/yrf-music/4ebc0f33-5472-470b-a2b5-c60ae36f84cb/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Bollywood,Asian",
       "language": "hi"
@@ -1239,7 +1005,7 @@
       "id": 5050,
       "name": "Saga Music",
       "logo": "https://a.jsrdn.com/hls/23146/saga-music/logo_20240322_183949_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/saga-music/4a0847b5-04c3-4c2c-a9d8-3e9f494fa8b4/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/saga-music/1c195888-b554-45d7-bca4-32d69248a078/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,Asian",
       "language": "pa"
@@ -1257,7 +1023,7 @@
       "id": 5143,
       "name": "DroneTV",
       "logo": "https://a.jsrdn.com/hls/23176/dronetv/logo_20240521_191242_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/dronetv/c8df64bb-b01e-401f-a9ff-73bfb0786b08/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/dronetv/e11a51e8-44d6-4cb4-952c-8435c82a3e42/0.m3u8",
       "category": "IAB20",
       "genre": "Travel,Nature,Lifestyle,English",
       "language": "en"
@@ -1266,25 +1032,16 @@
       "id": 5151,
       "name": "Global Punjab TV",
       "logo": "https://a.jsrdn.com/hls/22994/global-punjab-tv/logo_20240604_233922_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/global-punjab-tv/395a884e-11c8-4637-a50a-c314c6dad2be/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/global-punjab-tv/3499a4d2-6a67-4700-84ac-5e7f050ab83e/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,Asian",
       "language": "pa"
     },
     {
-      "id": 5153,
-      "name": "PLL Network",
-      "logo": "https://a.jsrdn.com/hls/22964/pll-network/logo_20240626_231937_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/pll-network/747e6a12-40a5-4d5d-ad6a-f41f2c96774f/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Lacrosse,English",
-      "language": "en"
-    },
-    {
       "id": 5155,
       "name": "TRACE UK",
       "logo": "https://a.jsrdn.com/hls/23073/trace-uk/logo_20240627_183320_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-uk/2a30d624-054a-467f-a558-94033b0b7cce/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trace-uk/afe84a23-c92d-4534-80f3-c5afc90fab17/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Music Video,English",
       "language": "en"
@@ -1302,7 +1059,7 @@
       "id": 5157,
       "name": "Green Chillies TV- Zindagi ka Tadka!",
       "logo": "https://a.jsrdn.com/hls/23179/green-chillies-tv/logo_20240627_214400_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/green-chillies-tv/8baae1d5-7014-412d-acb5-e7cc9f044124/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/green-chillies-tv/d7c8636d-0df5-4f5f-9d29-ba6fd89fda51/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Comedy,Devotional,Drama,Infotainment,Animation & Anime,Asian",
       "language": "hi"
@@ -1320,7 +1077,7 @@
       "id": 5199,
       "name": "News Nation",
       "logo": "https://a.jsrdn.com/hls/23184/news-nation/logo_20240807_231558_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-nation/9b16521b-5d53-482d-b924-0561e32598dc/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-nation/b9f247b2-0e26-4f95-a675-cdc3490b2a16/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Asian",
       "language": "hi"
@@ -1338,7 +1095,7 @@
       "id": 5235,
       "name": "Punjabi Hits",
       "logo": "https://a.jsrdn.com/hls/23196/punjabi-hits/logo_20241010_204324_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/punjabi-hits/0d88a817-5a29-4835-bdcb-65df2ed93f30/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/punjabi-hits/2e0fb491-3cf5-4ac6-afcd-c01c62f58a45/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Entertainment,Asian",
       "language": "pa"
@@ -1347,7 +1104,7 @@
       "id": 5236,
       "name": "CNA Originals",
       "logo": "https://a.jsrdn.com/hls/23200/cna-originals/logo_20250731_183340_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cna-originals/1c89c6c7-f131-4619-915c-018a4c63db36/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cna-originals/4eb8ec91-cd06-4ec1-9c0e-a8f4bdf14e60/0.m3u8",
       "category": "IAB12",
       "genre": "News,Documentary,Current Affairs,Asian",
       "language": "en"
@@ -1365,7 +1122,7 @@
       "id": 5241,
       "name": "Tabbar Hits",
       "logo": "https://a.jsrdn.com/hls/23196/tabbar-hits/logo_20241119_184505_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tabbar-hits/cb667a4f-b6d0-4f47-b690-1cd12be9e3e9/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tabbar-hits/570b615f-a6ad-48c3-8ce0-78ca5d9f2661/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Music Video,Asian",
       "language": "pa"
@@ -1446,7 +1203,7 @@
       "id": 5254,
       "name": "Haryana Beat",
       "logo": "https://a.jsrdn.com/hls/22994/haryana-beat/logo_20241127_213000_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/haryana-beat/ce87051e-87a1-4f1e-9652-5291ead1f91b/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/haryana-beat/2e26c402-44c3-44cd-acd6-0a23e48cbaa9/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Music,Movies,Pop Culture,Bollywood,Asian",
       "language": "hi"
@@ -1455,7 +1212,7 @@
       "id": 5255,
       "name": "Nakshatra Digital Tv",
       "logo": "https://a.jsrdn.com/hls/22994/nakshatra-digital-tv/logo_20241127_213756_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/nakshatra-digital-tv/3f7ab0ed-53b3-4201-aa6c-d756f91a76d8/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/nakshatra-digital-tv/c07037cc-f3b6-46eb-af98-90796f2a394b/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Music,Movies,Pop Culture,Bollywood,Asian",
       "language": "kn"
@@ -1464,7 +1221,7 @@
       "id": 5256,
       "name": "Sudarshan News",
       "logo": "https://a.jsrdn.com/hls/22994/sudarshan-news/logo_20241127_215403_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sudarshan-news/564eb337-0a35-4c0e-92af-a0c5b4fdac33/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sudarshan-news/bff8747b-9724-4438-a0ed-ad2656b19988/0.m3u8",
       "category": "IAB12",
       "genre": "News,Politics,Current Affairs,Asian",
       "language": "hi"
@@ -1473,7 +1230,7 @@
       "id": 5257,
       "name": "Sundrani Tv",
       "logo": "https://a.jsrdn.com/hls/22994/sundrani-tv/logo_20241127_220100_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sundrani-tv/956229f4-806d-4d06-8485-75ab11001dd2/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sundrani-tv/604f6d10-8391-49b9-bc67-07890ae8ec44/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Music,Movies,Pop Culture,Bollywood,Asian",
       "language": "hi"
@@ -1671,7 +1428,7 @@
       "id": 5284,
       "name": "hi Drama!",
       "logo": "https://a.jsrdn.com/hls/23205/hi-drama/logo_20250127_184605_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hi-drama/208086cf-6e8c-4074-bdd7-b4330786057b/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hi-drama/4fbef503-ab09-41be-bcc4-e67604bd278a/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Drama,Asian",
       "language": "en"
@@ -1680,7 +1437,7 @@
       "id": 5285,
       "name": "hi Life!",
       "logo": "https://a.jsrdn.com/hls/23205/hi-life/logo_20250127_190513_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hi-life/e4e3108c-6614-4c27-ae1c-f2866e4a4800/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hi-life/d06b85ce-2731-4886-b8e2-ff03e630eb4e/0.m3u8",
       "category": "IAB14",
       "genre": "Documentary,Travel,Lifestyle,Asian",
       "language": "en"
@@ -1689,7 +1446,7 @@
       "id": 5286,
       "name": "hi Vida!",
       "logo": "https://a.jsrdn.com/hls/23205/hi-vida/logo_20250127_192050_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hi-vida/00abaae0-329f-49a1-8f8e-b7d85fac2490/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hi-vida/e18505ab-16c4-4ea8-aab1-006a8ad3b5a2/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Drama,Asian,Spanish",
       "language": "es"
@@ -1698,7 +1455,7 @@
       "id": 5287,
       "name": "Living India News",
       "logo": "https://a.jsrdn.com/hls/23196/living-india-news/logo_20250205_001641_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/living-india-news/65f8df3d-4f91-48de-a243-51444f6e598b/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/living-india-news/0feed0e6-4fa8-4cef-83ef-af30b6b65d1d/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "pa"
@@ -1743,7 +1500,7 @@
       "id": 5294,
       "name": "OurVinyl",
       "logo": "https://a.jsrdn.com/hls/23208/ourvinyl/logo_20250211_203651_70.png",
-      "stream_url": "https://d2bs6p84qq6krv.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-OurVinyl/57807b91-891c-4337-b2fb-6892580ec733/0.m3u8",
+      "stream_url": "https://d2bs6p84qq6krv.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-OurVinyl/2fb013bf-a7e4-4582-a67e-c1f320d8a2b5/0.m3u8",
       "category": "IAB1",
       "genre": "Music,Entertainment,English",
       "language": "en"
@@ -1752,7 +1509,7 @@
       "id": 5295,
       "name": "My Money",
       "logo": "https://a.jsrdn.com/hls/23208/my-money/logo_20250211_204246_70.png",
-      "stream_url": "https://dqaj8xog66lli.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-MyMoney/5b42625d-debf-454d-b9d3-132585d74f04/0.m3u8",
+      "stream_url": "https://dqaj8xog66lli.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-MyMoney/cca5178f-eef2-4eb4-826a-f14d6debaec5/0.m3u8",
       "category": "IAB13",
       "genre": "Finance,Business,Entertainment,Reality TV,English",
       "language": "en"
@@ -1761,7 +1518,7 @@
       "id": 5296,
       "name": "Sports First TV",
       "logo": "https://a.jsrdn.com/hls/23208/sports-first-tv/logo_20250211_205731_70.png",
-      "stream_url": "https://d2396zb8liu8hs.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-SportsFirstTV/6beacb02-13c2-447c-88af-40dba6d10af6/0.m3u8",
+      "stream_url": "https://d2396zb8liu8hs.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV-MuxIP-SportsFirstTV/7f6b9a91-8332-47a5-86df-d99210fbe2e8/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,News,English",
       "language": "en"
@@ -1797,7 +1554,7 @@
       "id": 5303,
       "name": "Cigar TV",
       "logo": "https://a.jsrdn.com/hls/23212/cigar-tv/logo_20250318_223344_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cigar-tv/342cf116-ed37-45dc-b24b-3c473a46dcbd/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cigar-tv/bbbf69db-a691-4e3d-8a5d-0b1d8bf2ea05/0.m3u8",
       "category": "IAB9",
       "genre": "Lifestyle,Cigars,English",
       "language": "en"
@@ -1806,7 +1563,7 @@
       "id": 5305,
       "name": "Aaj Ki Khabar",
       "logo": "https://a.jsrdn.com/hls/23215/aaj-ki-khabar/logo_20250401_175431_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/aaj-ki-khabar/efd73fbb-f5d0-42d3-8d11-9666decf97ca/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/aaj-ki-khabar/dac0b00c-eef4-41a8-bd9d-76e10140e948/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,Current Affairs,Asian",
       "language": "hi"
@@ -1815,7 +1572,7 @@
       "id": 5306,
       "name": "Atmadarshan Tv",
       "logo": "https://a.jsrdn.com/hls/23215/atmadarshan-tv/logo_20250401_181523_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/atmadarshan-tv/9f4cb95b-58b9-4377-911c-afe513242129/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/atmadarshan-tv/db3c2fa9-bc1d-443f-844f-3d05ab39eea6/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Spirituality,Asian",
       "language": "hi"
@@ -1824,7 +1581,7 @@
       "id": 5308,
       "name": "Tara Tv",
       "logo": "https://a.jsrdn.com/hls/23215/tara-tv/logo_20250401_184429_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tara-tv/b8f21b29-f660-4d71-997b-990e82fe1aed/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tara-tv/8f623373-0c12-421e-8794-a467ec18ce32/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Infotainment,Pop Culture,Asian",
       "language": "bn"
@@ -1833,7 +1590,7 @@
       "id": 5309,
       "name": "The Unmute",
       "logo": "https://a.jsrdn.com/hls/23215/the-unmute/logo_20250401_185248_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/the-unmute/006f0e99-eead-47c6-bbc1-d48607fa46bf/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/the-unmute/d4885d36-2243-44fa-9410-03b63e1a07de/0.m3u8",
       "category": "IAB12",
       "genre": "News,Global News,Current Affairs,Asian",
       "language": "pa"
@@ -1842,7 +1599,7 @@
       "id": 5311,
       "name": "Wild Nature",
       "logo": "https://a.jsrdn.com/hls/23208/wild-nature/logo_20250401_214215_70.png",
-      "stream_url": "https://d3vqzhzmvqrbon.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV2-MuxIP-WildNature/c7df0604-b908-44d9-862b-3a5426868cb7/0.m3u8",
+      "stream_url": "https://d3vqzhzmvqrbon.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV2-MuxIP-WildNature/7285969f-29e2-41fa-bf31-9af967e24046/0.m3u8",
       "category": "IAB20",
       "genre": "Travel,Nature,Outdoors,English",
       "language": "en"
@@ -1851,7 +1608,7 @@
       "id": 5312,
       "name": "Wild TV",
       "logo": "https://a.jsrdn.com/hls/23208/wild-tv/logo_20250401_215043_70.png",
-      "stream_url": "https://d3p2bckoqrp179.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV2-MuxIP-WildTV/eadb5f83-1ea0-4140-9486-1ffccb59ad63/0.m3u8",
+      "stream_url": "https://d3p2bckoqrp179.cloudfront.net/v1/manifest/9d062541f2ff39b5c0f48b743c6411d25f62fc25/DistroTV2-MuxIP-WildTV/7bd4c58c-0ec1-4291-8477-d4648e57a1d5/0.m3u8",
       "category": "IAB9",
       "genre": "Lifestyle,Nature,Outdoors,Hunting,English",
       "language": "en"
@@ -1860,7 +1617,7 @@
       "id": 5316,
       "name": "Vande Bharat News",
       "logo": "https://a.jsrdn.com/hls/23215/vande-bharat-news/logo_20250429_224300_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/vande-bharat-news/ff076fca-b77a-4743-a433-493dbb3d0dfd/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/vande-bharat-news/c4e98093-8cc7-48e2-aecc-6027c4665327/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -1869,7 +1626,7 @@
       "id": 5317,
       "name": "KTV Bangla",
       "logo": "https://a.jsrdn.com/hls/23215/ktv-bangla/logo_20251030_205317_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tribe-tv/fd1f7030-8502-4f96-a39f-44361bf1eb38/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tribe-tv/955aa2a2-17d6-4538-b540-dfb19b764bae/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Hindi GEC,Infotainment,Asian",
       "language": "bn"
@@ -1878,7 +1635,7 @@
       "id": 5318,
       "name": "Ann Channel",
       "logo": "https://a.jsrdn.com/hls/23215/ann-channel/logo_20250429_232010_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ann-channel/5dc1b46f-5135-485c-80b9-a5ba2a643bcb/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ann-channel/00137422-8406-40ea-8f5d-30c5bfe11f1c/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,News,Cricket,Music Video,Infotainment,Hindi GEC,Asian",
       "language": "ur"
@@ -1887,7 +1644,7 @@
       "id": 5319,
       "name": "Indian News",
       "logo": "https://a.jsrdn.com/hls/23215/indian-news/logo_20251112_192835_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-flash/b2909ffe-1f25-44f5-891e-710404d510eb/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-flash/10fa8490-33ac-4b99-b5ed-21fc45f30043/0.m3u8",
       "category": "IAB12",
       "genre": "News,Local News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -1896,7 +1653,7 @@
       "id": 5321,
       "name": "Mahua Play",
       "logo": "https://a.jsrdn.com/hls/23215/mahua-play/logo_20250429_233701_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahua-play/442986cc-09ea-4e4d-88fa-daf3829435a2/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahua-play/13246ee9-c759-4615-90e4-b4fb41cfbdab/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Hindi GEC,Asian",
       "language": "bh"
@@ -1905,7 +1662,7 @@
       "id": 5322,
       "name": "Mahua Khabar",
       "logo": "https://a.jsrdn.com/hls/23215/mahua-khabar/logo_20250429_234028_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahua-khabar/67217a25-192b-47d1-85bc-5474f050fb2d/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahua-khabar/285ac604-44d4-4a86-8b58-ffcd0e293346/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "bh"
@@ -1941,7 +1698,7 @@
       "id": 5327,
       "name": "Anand Tv",
       "logo": "https://a.jsrdn.com/hls/23215/anand-tv/logo_20250611_202131_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/anand-tv/dd59331c-e9a6-49fc-a883-d4024f47fa03/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/anand-tv/f433e6de-1a23-4fd4-bfcc-b6e6cf72c6e7/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "hi"
@@ -1950,7 +1707,7 @@
       "id": 5328,
       "name": "Bharat 24",
       "logo": "https://a.jsrdn.com/hls/23215/bharat-24/logo_20250611_203139_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bharat-24/0337758e-5651-4236-ba96-d981e63bd6a6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bharat-24/a059a114-c21c-462d-ab51-164081696e80/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -1959,7 +1716,7 @@
       "id": 5329,
       "name": "Mahaa Max",
       "logo": "https://a.jsrdn.com/hls/23215/mahaa-max/logo_20250611_203843_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahaa-max/8aaf5d37-c26b-45be-9b7d-17048bedaaa2/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahaa-max/e958c211-1507-488f-a00b-158b00883060/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Bollywood,Tollywood,Asian",
       "language": "te"
@@ -1968,7 +1725,7 @@
       "id": 5330,
       "name": "Mahaa News",
       "logo": "https://a.jsrdn.com/hls/23215/mahaa-news/logo_20250611_204304_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahaa-news/62947935-7048-41e4-ad48-37714971a043/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mahaa-news/34ec6819-91b8-4549-bfc3-94b68e601747/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "te"
@@ -1977,7 +1734,7 @@
       "id": 5331,
       "name": "Munsif Tv",
       "logo": "https://a.jsrdn.com/hls/23215/munsif-tv/logo_20250611_205016_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/munsif-tv/04c0f047-b1b0-453f-a729-6794a3c1a996/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/munsif-tv/0ef0d338-5028-43ba-baf4-2392c4a99ef8/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "ur"
@@ -1986,7 +1743,7 @@
       "id": 5333,
       "name": "News Marathi 24X7",
       "logo": "https://a.jsrdn.com/hls/23215/news-marathi-24x7/logo_20250611_210319_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-marathi-24x7/afc9ccfc-87b3-4abc-bb20-749d612a376c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-marathi-24x7/39dad7c9-ec92-4647-9ca9-d6d0f1cd8d75/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "mr"
@@ -1995,7 +1752,7 @@
       "id": 5334,
       "name": "Rongeen Tv",
       "logo": "https://a.jsrdn.com/hls/23215/rongeen-tv/logo_20250611_210748_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/rongeen-tv/6ec6b37c-30c6-4ced-a1c6-7cd2a2aae254/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/rongeen-tv/7f1d118d-b9cb-4712-bdc9-2427450a06cc/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Animation & Anime,Family/Children,Asian",
       "language": "bn"
@@ -2004,7 +1761,7 @@
       "id": 5335,
       "name": "Rozana Spokesman",
       "logo": "https://a.jsrdn.com/hls/23215/rozana-spokesman/logo_20250611_211157_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/rozana-spokesman/83ec3b39-84dd-4df9-83f3-0cec1a9ac57a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/rozana-spokesman/4509d772-17ea-4792-b66a-9733c8622d31/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "pa"
@@ -2013,7 +1770,7 @@
       "id": 5336,
       "name": "Prameya News7",
       "logo": "https://a.jsrdn.com/hls/23215/prameya-news7/logo_20250614_211231_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/prameya-news7/03adbcdf-c1a1-46ab-a3f1-8a516058d2bc/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/prameya-news7/ffd8276c-5458-4096-9ec6-8f5a2afdc982/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "or"
@@ -2022,7 +1779,7 @@
       "id": 5339,
       "name": "UnchainedTV",
       "logo": "https://a.jsrdn.com/hls/23064/unchainedtv/logo_20250617_212400_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/unchainedtv/0c3c59a2-2b1d-4db3-8579-70e920f1d980/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/unchainedtv/2368f064-7a80-4f13-9ddb-7744c3eae44d/0.m3u8",
       "category": "IAB8",
       "genre": "Entertainment,Food,English",
       "language": "en"
@@ -2031,7 +1788,7 @@
       "id": 5340,
       "name": "POWERtube TV",
       "logo": "https://a.jsrdn.com/hls/23064/powertube-tv/logo_20250617_213124_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/powertube-tv/8ebd2dc3-04de-4bf8-9110-ab42c4b1d9ea/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/powertube-tv/f0d9739b-74be-46bb-9f1f-1e6a36a32708/0.m3u8",
       "category": "IAB2",
       "genre": "Lifestyle,Auto Racing,English",
       "language": "en"
@@ -2040,7 +1797,7 @@
       "id": 5341,
       "name": "Screams TV by Trinian",
       "logo": "https://a.jsrdn.com/hls/23064/screams-tv-by-trinian/logo_20250617_213711_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/screams-tv-by-trinian/2f9de047-390f-4428-9f3c-e9a3b3fe8015/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/screams-tv-by-trinian/94a5cf5b-6fce-4ead-88ef-356da6c28580/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Horror,Thriller,Movies,English",
       "language": "en"
@@ -2049,7 +1806,7 @@
       "id": 5342,
       "name": "Gritos TV by Trinian",
       "logo": "https://a.jsrdn.com/hls/23064/gritos-tv-by-trinian/logo_20250617_214111_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gritos-tv-by-trinian/dfa7ca03-1765-4b37-90f8-885dcd04a0c2/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gritos-tv-by-trinian/91e0cb6e-999e-423f-98a2-44687294fe12/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Horror,Thriller,Movies,Spanish",
       "language": "es"
@@ -2058,7 +1815,7 @@
       "id": 5343,
       "name": "Mi Raza Canal",
       "logo": "https://a.jsrdn.com/hls/23064/mi-raza-canal/logo_20250617_214629_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mi-raza-canal/ed0ab015-ec35-4813-bf6a-0803b2a07a0d/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mi-raza-canal/1516d979-9c31-41b1-92f6-7386e78316de/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Spanish",
       "language": "es"
@@ -2067,7 +1824,7 @@
       "id": 5344,
       "name": "Mi Raza Canal Plus",
       "logo": "https://a.jsrdn.com/hls/23064/mi-raza-canal-plus/logo_20250617_215110_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mi-raza-canal-plus/50138c81-c7bb-4e5b-8916-a93fab6480d6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mi-raza-canal-plus/caa05054-495b-4922-a105-a789724fbfc0/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Spanish",
       "language": "es"
@@ -2076,7 +1833,7 @@
       "id": 5345,
       "name": "Mi Miedo Canal",
       "logo": "https://a.jsrdn.com/hls/23064/mi-miedo-canal/logo_20250617_215415_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mi-miedo-canal/db72a013-2a5a-48c6-b478-667bb59c5cbb/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mi-miedo-canal/5715fd2c-9769-49db-b48f-1d14f8c990d6/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Classic Movies,Spanish",
       "language": "es"
@@ -2085,7 +1842,7 @@
       "id": 5346,
       "name": "India Daily 24x7",
       "logo": "https://a.jsrdn.com/hls/23225/india-daily-24x7/logo_20250618_171159_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/india-daily-24x7/fb6fd861-6312-49fc-9ad6-f356d1e77cf3/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/india-daily-24x7/3eb6e6f6-ebb0-4f66-b6f4-a73d20b618af/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -2094,7 +1851,7 @@
       "id": 5347,
       "name": "Elevation Church Network",
       "logo": "https://a.jsrdn.com/hls/23224/elevation-church-network/logo_20250623_165558_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/elevation-church-network/5154df8c-331d-49fd-90fb-1c4012ec614a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/elevation-church-network/61474c34-cdbc-4bde-b465-99911ccd5d60/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,English",
       "language": "en"
@@ -2103,7 +1860,7 @@
       "id": 5348,
       "name": "News Tamil 24x7",
       "logo": "https://a.jsrdn.com/hls/23215/news-tamil-24x7/logo_20250710_175602_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-tamil-24x7/605a4240-7228-4576-9b0d-c99314008104/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-tamil-24x7/0eedeb3f-545c-49dc-bb0e-1ad7618e5d1c/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "ta"
@@ -2112,7 +1869,7 @@
       "id": 5349,
       "name": "News Malayalam 24x7",
       "logo": "https://a.jsrdn.com/hls/23215/news-malayalam-24x7/logo_20250710_180603_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-malayalam-24x7/68ebaf2b-fd3e-4b2d-bac1-1bd3ff143c03/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/news-malayalam-24x7/fc444430-9802-43af-99e4-3620b2698eee/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current,Current Affairs,Politics,Asian",
       "language": "ml"
@@ -2121,7 +1878,7 @@
       "id": 5350,
       "name": "World Punjabi Tv",
       "logo": "https://a.jsrdn.com/hls/23215/world-punjabi-tv/logo_20250813_195456_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/world-punjabi-tv/f4f1aeba-39a5-416c-a960-d292a1f8b8ef/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/world-punjabi-tv/ce07dbb4-fca5-4cc7-8226-54c05942a3eb/0.m3u8",
       "category": "IAB12",
       "genre": "News,Politics,Current Affairs,Asian",
       "language": "pa"
@@ -2130,7 +1887,7 @@
       "id": 5351,
       "name": "Top News Marathi",
       "logo": "https://a.jsrdn.com/hls/23215/top-news-marathi/logo_20250813_200205_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/top-news-marathi/f61339e9-1aea-49e9-b7a8-57ec6b8aaeaa/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/top-news-marathi/0c79b8ca-aebd-4b66-a089-bb25c509276d/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "mr"
@@ -2139,7 +1896,7 @@
       "id": 5352,
       "name": "Pratham Khabar 24x7",
       "logo": "https://a.jsrdn.com/hls/23215/pratham-khabar-24x7/logo_20250813_201110_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/pratham-khabar-24x7/94c70b09-debf-40cc-ac53-8b76f71611a6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/pratham-khabar-24x7/78699567-2729-4fbc-b651-0d7118507808/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "as"
@@ -2157,7 +1914,7 @@
       "id": 5358,
       "name": "Crime & Evidence",
       "logo": "https://a.jsrdn.com/hls/23181/crime-and-evidence/logo_20250818_194230_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/crime-and-evidence/74b751ed-2bc9-4758-835f-b9dc89c90483/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/crime-and-evidence/93c8ce1a-adca-4438-be41-c6d429735148/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,True Crime,Documentary,English",
       "language": "en"
@@ -2166,7 +1923,7 @@
       "id": 5359,
       "name": "Novo Comedy",
       "logo": "https://a.jsrdn.com/hls/23181/novo-comedy/logo_20250818_195239_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/novo-comedy/985951a6-4180-4797-9e66-69913d67f05e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/novo-comedy/ba24a096-1071-4a79-8053-89a200bf9a24/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Comedy,Family/Children,English",
       "language": "en"
@@ -2175,7 +1932,7 @@
       "id": 5360,
       "name": "Kolkata Tv",
       "logo": "https://a.jsrdn.com/hls/23215/kolkata-tv/logo_20250819_185012_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kolkata-tv/64527b19-be41-4014-9ff2-92d8a48ba93a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kolkata-tv/f027207c-c986-4455-81a0-ad0a11e42fe7/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "bn"
@@ -2184,7 +1941,7 @@
       "id": 5361,
       "name": "P18 News",
       "logo": "https://a.jsrdn.com/hls/23215/p18-news/logo_20250819_191658_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/p18-news/0d0e5500-bed8-4b97-bab3-98e356b6a7f6/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/p18-news/ddbb20a8-ef5a-4255-aa62-7e81d93039fb/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "pa"
@@ -2193,7 +1950,7 @@
       "id": 5362,
       "name": "Big Tv",
       "logo": "https://a.jsrdn.com/hls/23215/big-tv/logo_20250911_175211_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/big-tv/9eb19d91-dd70-43f7-968f-afec06064e68/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/big-tv/2e52bbd8-dfac-4795-99b4-ee7c2be74d8d/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "te"
@@ -2202,7 +1959,7 @@
       "id": 5363,
       "name": "ABN Andhra Jyothy",
       "logo": "https://a.jsrdn.com/hls/23215/abn-andhra-jyothy/logo_20250911_180032_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abn-andhra-jyothy/9353062a-b1e4-47b8-9567-5247c7f03b7f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/abn-andhra-jyothy/24367a06-be2d-4baa-8089-a4b314cb3a67/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "te"
@@ -2211,7 +1968,7 @@
       "id": 5367,
       "name": "Sana Tv",
       "logo": "https://a.jsrdn.com/hls/23215/sana-tv/logo_20251009_220955_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sana-tv/4e899835-e353-4a47-9d88-7c069800d5b9/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sana-tv/a34f8c22-4116-4a1a-aeb6-caf87b7322dc/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Bollywood,Asian",
       "language": "ta"
@@ -2220,7 +1977,7 @@
       "id": 5368,
       "name": "Janataa TV Kannada",
       "logo": "https://a.jsrdn.com/hls/23215/janataa-tv-kannada/logo_20251009_221851_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/janataa-tv-kannada/1cd621ae-cc46-44a8-ba20-4d87fbf4f49f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/janataa-tv-kannada/e4ac925f-729c-498d-9bbd-ac5aec189149/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "kn"
@@ -2229,7 +1986,7 @@
       "id": 5369,
       "name": "DA News Plus",
       "logo": "https://a.jsrdn.com/hls/23215/da-news-plus/logo_20251009_222532_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/da-news-plus/1da10c81-e614-47c8-8ac8-97bb544abb22/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/da-news-plus/d7070427-2908-40cf-adc0-69e6cd25ead0/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -2238,7 +1995,7 @@
       "id": 5370,
       "name": "Sandesh News",
       "logo": "https://a.jsrdn.com/hls/23233/sandesh-news/logo_20251028_214640_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sandesh-news/0c872a3c-2b2d-47b5-af54-e0fc7d70fe61/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sandesh-news/d2b1b133-373f-40e3-9e33-ceefa0493c58/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "gu"
@@ -2247,7 +2004,7 @@
       "id": 5371,
       "name": "Gujarat First",
       "logo": "https://a.jsrdn.com/hls/23215/gujarat-first/logo_20251028_215133_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gujarat-first/2021dbf1-a685-478c-8178-b9ac8954fe63/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gujarat-first/ac0bfca5-df8e-4595-b09a-0864d036ef44/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "gu"
@@ -2256,7 +2013,7 @@
       "id": 5372,
       "name": "35MM",
       "logo": "https://a.jsrdn.com/hls/23215/35mm/logo_20251028_215600_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/35mm/145f13fe-2233-498d-affe-696fecbbdc45/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/35mm/2a65a587-8890-4d2b-b335-375640a044d9/0.m3u8",
       "category": "IAB23",
       "genre": "Lifestyle,Devotional,Asian",
       "language": "hi"
@@ -2265,7 +2022,7 @@
       "id": 5373,
       "name": "Sakshi Tv",
       "logo": "https://a.jsrdn.com/hls/23234/sakshi-tv/logo_20251029_121718_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sakshi-tv/efcef5e9-e364-435b-97a7-ef3b8bf8c75c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sakshi-tv/d6a8533c-5a1a-4140-8b17-019c5dc6adef/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "te"
@@ -2310,7 +2067,7 @@
       "id": 5378,
       "name": "Prime Asia Tv",
       "logo": "https://a.jsrdn.com/hls/23215/prime-asia-tv/logo_20251125_201232_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/prime-asia-tv/c1670f24-d309-4696-848a-497555a25387/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/prime-asia-tv/d22db7a0-0300-4e87-8645-4f88d4459adc/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "pa"
@@ -2334,19 +2091,10 @@
       "language": "es"
     },
     {
-      "id": 5381,
-      "name": "Bowling TV",
-      "logo": "https://a.jsrdn.com/hls/22964/bowling-tv/logo_20260129_214128_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bowling-tv/450a3ac4-dd0e-4c1c-82a5-daeef6630c55/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Bowling,English",
-      "language": "en"
-    },
-    {
       "id": 5382,
       "name": "CTVN AKD Plus",
       "logo": "https://a.jsrdn.com/hls/23215/ctvn-akd-plus/logo_20251212_223640_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ctvn-akd-plus/0f90b4e7-d2e6-4d21-a0ed-5a5ca2870b0e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ctvn-akd-plus/47a5b17e-5382-4aef-a4da-8ed861fdd6b1/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Travel,Asian",
       "language": "bn"
@@ -2355,7 +2103,7 @@
       "id": 5383,
       "name": "CN News",
       "logo": "https://a.jsrdn.com/hls/23215/cn-news/logo_20251212_224056_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cn-news/1bb70f84-bd58-46d7-9e93-a1e67bc87412/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cn-news/1d472ea0-aec7-41eb-9d97-ad3c1f7b039f/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "bn"
@@ -2364,7 +2112,7 @@
       "id": 5384,
       "name": "RVTV",
       "logo": "https://a.jsrdn.com/hls/23241/rvtv/logo_20251217_201036_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/rvtv/6278a77a-cf90-47af-9c1b-2c06db88af83/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/rvtv/a94c03ab-c1dd-484c-b52b-db149e219a94/0.m3u8",
       "category": "IAB2",
       "genre": "Lifestyle,Travel,Automotive,English",
       "language": "en"
@@ -2373,7 +2121,7 @@
       "id": 5385,
       "name": "Wine, Watches & Whiskey",
       "logo": "https://a.jsrdn.com/hls/23241/wine-watches-whiskey/logo_20251217_201432_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/wine-watches-whiskey/2c00fd9e-4fe1-4735-b3ff-79a1ae72665e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/wine-watches-whiskey/112bb930-e846-4da0-bced-e419f5d7e1b0/0.m3u8",
       "category": "IAB9",
       "genre": "Lifestyle,Collectors,Luxury,English",
       "language": "en"
@@ -2388,19 +2136,10 @@
       "language": "en"
     },
     {
-      "id": 5387,
-      "name": "Pickleball Now",
-      "logo": "https://a.jsrdn.com/hls/22979/pickleball-now/logo_20260106_185156_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/pickleball-now/9545f199-7809-40e8-bd3a-aa9b25c4a779/0.m3u8",
-      "category": "IAB17",
-      "genre": "Sports,Lifestyle,Documentary,English",
-      "language": "en"
-    },
-    {
       "id": 5388,
       "name": "PTC Punjabi Canada",
       "logo": "https://a.jsrdn.com/hls/23215/ptc-punjabi-canada/logo_20260113_224655_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ptc-punjabi-canada/21f94ad2-2462-4d2d-9099-38490d5a0b14/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/ptc-punjabi-canada/507a2c28-12d9-4204-b13b-078793f46af0/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Global News,Current Affairs,Asian",
       "language": "pa"
@@ -2409,7 +2148,7 @@
       "id": 5389,
       "name": "Amar Ujala",
       "logo": "https://a.jsrdn.com/hls/23249/amar-ujala/logo_20260115_224430_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/amar-ujala/5dae411c-62ed-4d12-b70c-9b0de918c174/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/amar-ujala/9dcf3bfe-b0ba-4bc3-a6f9-1c5852391c4d/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -2427,7 +2166,7 @@
       "id": 5391,
       "name": "GTC Punjabi",
       "logo": "https://a.jsrdn.com/hls/23215/gtc-punjabi/logo_20260122_221155_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gtc-punjabi/12c0b649-3671-4f50-9cc3-cfb3d707d095/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/gtc-punjabi/05abe925-f684-449b-bcac-e38e5176180e/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Bollywood,Asian",
       "language": "pa"
@@ -2436,7 +2175,7 @@
       "id": 5392,
       "name": "Punjabi Shorts",
       "logo": "https://a.jsrdn.com/hls/23215/punjabi-shorts/logo_20260122_222121_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/punjabi-shorts/aec69888-e51c-4765-9eeb-c632bef38e5f/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/punjabi-shorts/293a96f7-9a36-43ad-b9b0-ee786ed83926/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Movies,Bollywood,Asian",
       "language": "pa"
@@ -2481,7 +2220,7 @@
       "id": 5397,
       "name": "Golf Network",
       "logo": "https://a.jsrdn.com/hls/23064/golf-network/logo_20260203_224133_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/golf-network/30762e1a-88b4-4aee-955f-24597d3e6a0a/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/golf-network/d0dda0b9-e195-437e-a9c3-5bdaa45958cc/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Golf,English",
       "language": "en"
@@ -2490,7 +2229,7 @@
       "id": 5398,
       "name": "Foosball TV",
       "logo": "https://a.jsrdn.com/hls/23064/foosball-tv/logo_20260203_224826_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/foosball-tv/4bd69e41-f54f-4ff3-90a0-85103cbc0929/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/foosball-tv/68cda7a9-b721-43aa-9ec4-f44077c5b076/0.m3u8",
       "category": "IAB9",
       "genre": "Sports,Table Soccer,English",
       "language": "en"
@@ -2499,7 +2238,7 @@
       "id": 5399,
       "name": "Bharat Express",
       "logo": "https://a.jsrdn.com/hls/23215/bharat-express/logo_20260203_230506_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bharat-express/b96a47cb-3cd3-49dc-85db-842e1513501e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bharat-express/ae5028cb-9346-4606-ae80-f0b4d8cea3ea/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "hi"
@@ -2508,7 +2247,7 @@
       "id": 5400,
       "name": "Argus News",
       "logo": "https://a.jsrdn.com/hls/23215/argus-news/logo_20260203_231211_70.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/argus-news/d32ac3b5-8e73-40e0-acca-cd756e8da17c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/argus-news/1b09f1df-5f59-4f2a-9fd7-8821742a0c1f/0.m3u8",
       "category": "IAB12",
       "genre": "News,Current Affairs,Politics,Asian",
       "language": "or"
@@ -2517,7 +2256,7 @@
       "id": 5438,
       "name": "CUISINE CULTURE",
       "logo": "https://a.jsrdn.com/hls/23064/cuisine-culture/logo_20260217_234602_68.jpg",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cuisine-culture/c22ab60a-01d9-4cf1-a492-dba688fd58cb/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/cuisine-culture/98d29d63-badb-479c-bc29-e19ec81de17f/0.m3u8",
       "category": "IAB8",
       "genre": "Lifestyle,Food,Travel,English",
       "language": "en"
@@ -2526,7 +2265,7 @@
       "id": 5439,
       "name": "Trufa",
       "logo": "https://a.jsrdn.com/hls/23064/trufa/logo_20260217_235001_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trufa/a272a6a3-d827-41c8-b670-bd1980f0e1e2/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/trufa/bd1a177e-1c30-4059-811f-07d326048908/0.m3u8",
       "category": "IAB8",
       "genre": "Lifestyle,Food,Travel,English",
       "language": "en"
@@ -2535,7 +2274,7 @@
       "id": 5440,
       "name": "Wai Lana",
       "logo": "https://a.jsrdn.com/hls/23064/wai-lana/logo_20260217_235345_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/wai-lana/496f7055-69fa-43cd-ae22-19c3bee66220/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/wai-lana/b5990a6e-234e-4f33-8deb-e7cbbf664895/0.m3u8",
       "category": "IAB7",
       "genre": "Lifestyle,Wellness,Health,English",
       "language": "en"
@@ -2544,7 +2283,7 @@
       "id": 5441,
       "name": "BOLLYWOOD 4U",
       "logo": "https://a.jsrdn.com/hls/23064/bollywood-4u/logo_20260310_212919_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-4u/01529afd-eb89-42ce-a4d4-ad52a2f16741/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-4u/5a0d0ab3-41fc-4b7e-8702-c42b2d0ddf12/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Bollywood,Movies,Asian",
       "language": "hi"
@@ -2553,7 +2292,7 @@
       "id": 5442,
       "name": "BOLLYWOOD TV",
       "logo": "https://a.jsrdn.com/hls/23064/bollywood-tv/logo_20260310_213535_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-tv/b49a763d-9625-4faf-844f-0262ab1131f8/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-tv/d7ab2295-853b-4b9a-965e-320525a5ec5e/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Bollywood,Movies,Drama,Action/Adventure,Comedy,Asian",
       "language": "hi"
@@ -2571,7 +2310,7 @@
       "id": 5445,
       "name": "HUNT FISH TV",
       "logo": "https://a.jsrdn.com/hls/23064/hunt-fish-tv/logo_20260317_202531_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hunt-fish-tv/fac5e00f-ae73-4c15-b85e-c101d92dba6e/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/hunt-fish-tv/dbfe60bf-a46c-4b95-a980-5742c024200d/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Hunting,Fishing,Outdoors,English",
       "language": "en"
@@ -2580,7 +2319,7 @@
       "id": 5447,
       "name": "SPORT FISHING TV",
       "logo": "https://a.jsrdn.com/hls/23064/sport-fishing-tv/logo_20260317_204009_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sport-fishing-tv/fd0e1548-0304-48ee-9c41-f73b3ac52da7/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/sport-fishing-tv/92a6d51e-47f3-482d-8e14-03867e860000/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Fishing,Outdoor,Travel,Nature,English",
       "language": "en"
@@ -2589,7 +2328,7 @@
       "id": 5448,
       "name": "Absinthe TV",
       "logo": "https://a.jsrdn.com/hls/23064/absinthe-tv/logo_20260324_011120_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/absinthe-tv/74400857-2bab-4517-9a47-8489c1f37194/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/absinthe-tv/3798ff48-d8dd-4255-b5cf-8a612dbf615a/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Action/Adventure,Surf,Skate,Music Video,English",
       "language": "en"
@@ -2598,7 +2337,7 @@
       "id": 5449,
       "name": "AMERICA'S BOATING CHANNEL",
       "logo": "https://a.jsrdn.com/hls/23064/americas-boating-channel/logo_20260324_011816_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/americas-boating-channel/154f977f-eb1e-4510-85d1-55f2504b26fb/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/americas-boating-channel/7c0d5bdc-ca0a-418b-9347-ae7f05996a78/0.m3u8",
       "category": "IAB2",
       "genre": "Lifestyle,Sports,English",
       "language": "en"
@@ -2607,7 +2346,7 @@
       "id": 5450,
       "name": "CHRONO TV",
       "logo": "https://a.jsrdn.com/hls/23064/chrono-tv/logo_20260324_012150_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/chrono-tv/45d36883-d5fb-4f02-b1c5-bd29405dc5da/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/chrono-tv/3e0eea5c-8cf3-4dd6-8f2e-711e5acab452/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Auto Racing,English",
       "language": "en"
@@ -2616,7 +2355,7 @@
       "id": 5451,
       "name": "DRIVE + SPEED",
       "logo": "https://a.jsrdn.com/hls/22626/drive-plus-speed/logo_20260324_012751_68.jpg",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/drive-plus-speed/462d6953-77ab-4b87-8b4a-45a4fe7809dc/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/drive-plus-speed/f27b62e0-ac1d-4e44-b12e-9cd22f0b8d82/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Auto Racing,English",
       "language": "en"
@@ -2625,7 +2364,7 @@
       "id": 5452,
       "name": "FIGHT TV",
       "logo": "https://a.jsrdn.com/hls/23064/fight-tv/logo_20260324_013251_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/fight-tv/5be21137-d55f-4ff8-8e61-df0e790a051c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/fight-tv/86ac611e-30e8-4502-8b17-8baf1255854a/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Boxing,Martial Arts,Wrestling,English",
       "language": "en"
@@ -2634,7 +2373,7 @@
       "id": 5453,
       "name": "HORROR TV",
       "logo": "https://a.jsrdn.com/hls/23064/horror-tv/logo_20260324_013632_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/horror-tv/80487ea2-f7b1-4096-ae65-23dc73c921d7/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/horror-tv/de38373c-15a8-46a5-abe0-508ae477c0a8/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Horror,Thriller,English",
       "language": "en"
@@ -2643,7 +2382,7 @@
       "id": 5455,
       "name": "TEST MY RIDE",
       "logo": "https://a.jsrdn.com/hls/23064/test-my-ride/logo_20260324_014622_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/test-my-ride/4dbc240e-7a54-4635-af3c-a6854b91e345/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/test-my-ride/4aee9dee-cfd9-4bc8-b21d-661937d4d1dc/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Auto Racing,English",
       "language": "en"
@@ -2652,7 +2391,7 @@
       "id": 5456,
       "name": "THALAA TV",
       "logo": "https://a.jsrdn.com/hls/23064/thalaa-tv/logo_20260324_015038_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/thalaa-tv/e9bf14bb-444f-414d-89b0-e9ec0a1d9e70/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/thalaa-tv/c1fd361f-5ac6-4cba-8642-2609229602c1/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Classic Movies,Bollywood,Asian",
       "language": "ta"
@@ -2661,7 +2400,7 @@
       "id": 5457,
       "name": "TOLLY TV",
       "logo": "https://a.jsrdn.com/hls/23064/tolly-tv/logo_20260324_015537_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tolly-tv/28412706-25ad-4403-83fd-4432ad3fe64c/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tolly-tv/9bdf78b1-a594-4d26-976c-977e379a4cb4/0.m3u8",
       "category": "IAB1",
       "genre": "Entertainment,Bollywood,Classic Movies,Asian",
       "language": "te"
@@ -2670,7 +2409,7 @@
       "id": 5458,
       "name": "THE RING TV",
       "logo": "https://a.jsrdn.com/hls/23064/the-ring-tv/logo_20260324_015855_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/the-ring-tv/6c65cc24-bdf7-4a96-80d8-4844aad69771/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/the-ring-tv/d1ff0ea6-5f58-405b-a19e-8bcfbad20a5d/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Martial Arts,Boxing,Wrestling,English",
       "language": "en"
@@ -2679,7 +2418,7 @@
       "id": 5459,
       "name": "TyC Sports FAN",
       "logo": "https://a.jsrdn.com/hls/23064/tyc-sports-fan/logo_20260324_020328_68.png",
-      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tyc-sports-fan/09a2c8bb-80e9-4b06-b355-1ade8ecdefbd/0.m3u8",
+      "stream_url": "https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/tyc-sports-fan/f3188c17-9eeb-420c-ae40-01d459e103aa/0.m3u8",
       "category": "IAB17",
       "genre": "Sports,Soccer,English",
       "language": "en"
